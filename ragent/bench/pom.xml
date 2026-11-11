@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nageoffer.ai</groupId>
+        <artifactId>ragent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>bench</artifactId>
+    <description>
+        Token 基准测试实验层：策略配置（分块/检索/路由/缓存）、基准运行器、质量评分与自动实验报告。
+        纯 Java main 可运行，不依赖 Spring 容器、数据库、Redis、MQ。
+    </description>
+
+    <dependencies>
+        <!-- 计量 SDK：TokenUsage / MeterContext / PricingTable / MeterAggregator -->
+        <dependency>
+            <groupId>com.nageoffer.ai</groupId>
+            <artifactId>tokenmeter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- 复用 Ragent 真实的分块与检索融合组件（本模块直接 new 它们，不启动容器） -->
+        <dependency>
+            <groupId>com.nageoffer.ai</groupId>
+            <artifactId>rag</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- JSON 解析：读语料 jsonl、写 summary.json -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

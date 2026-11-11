@@ -1,0 +1,38 @@
+{
+  "name": "tokenbench-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "TokenBench — Token 消耗可观测的 Agentic RAG 基准测试仪表盘",
+  "scripts": {
+    "install:fix": "node scripts/fix-node-modules.mjs",
+    "dev": "vite",
+    "build": "node scripts/build.mjs",
+    "build:vite": "tsc -b && vite build",
+    "preview": "vite preview",
+    "check": "node scripts/check.mjs",
+    "smoke": "node scripts/smoke.mjs --dist",
+    "logic": "node scripts/logic-check.mjs",
+    "fallback": "node scripts/fallback-check.mjs",
+    "render": "node scripts/render-check.mjs",
+    "gen:data": "node scripts/gen-sample-data.mjs"
+  },
+  "dependencies": {
+    "echarts": "5.5.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "28.0.1",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.49",
+    "rollup": "^4.68.1",
+    "tailwindcss": "3.4.17",
+    "terser": "5.36.0",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nageoffer.ai</groupId>
+        <artifactId>ragent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>tokenmeter</artifactId>
+    <name>tokenmeter</name>
+    <description>
+        Token 计量 SDK：为 Agentic RAG 基准测试提供与框架无关的 Token/成本/延迟计量能力。
+        零 Spring 依赖，可在纯 Java main 中直接使用；仅依赖 JDK + slf4j-api + jackson-databind。
+    </description>
+
+    <dependencies>
+        <!--
+            父 POM 以 <dependencies> 形式统一引入了 Spring Boot 相关依赖，子模块无法移除，只能在此降级为
+            provided：既保证本模块自身编译不受影响，又不会把 Spring 传递给依赖 tokenmeter 的下游模块。
+            本模块源码中不出现任何 Spring 类型，可在纯 Java main 中运行。
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-jackson2</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Lombok 仅按项目约定声明（provided），本模块源码未使用注解处理器，全部手写代码 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <!-- 仅用于 JsonlMeterSink 的事件序列化/反序列化（字段名与契约 4.2 一致） -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

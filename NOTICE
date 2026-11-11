@@ -1,0 +1,17 @@
+TokenBench — Token 消耗可观测的 Agentic RAG 基准测试平台
+Copyright 2026 zzc1-nz
+
+本项目包含源自 nageoffer/ragent（https://github.com/nageoffer/ragent）的代码，
+该上游项目采用 Apache License 2.0 授权（见 ragent/LICENSE）。
+
+本项目的增量扩展部分（tokenmeter、bench、dashboard、data、charts、scripts 目录，
+以及根目录 README.md / CONTRACT.md）由 zzc1-nz 编写，同样以 Apache License 2.0 授权。
+
+依据 Apache License 2.0 第 4 条，对上游源码的修改说明如下：
+
+1. 新增 Maven 模块 tokenmeter（Token 计量 SDK）与 bench（基准实验层），
+   并在根 pom.xml 的 <modules> 中追加这两个模块。
+2. 其余上游模块（framework / infra-ai / system / rag / agent / bootstrap / mcp-server /
+   frontend / resources / docs / assets）保持上游原样，未做修改。
+
+上游项目版权归 nageoffer 所有。

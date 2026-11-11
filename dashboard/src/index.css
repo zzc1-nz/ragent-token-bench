@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-ink-950 text-ink-200 antialiased;
+    font-feature-settings: 'tnum' 1, 'cv02' 1, 'cv03' 1, 'cv04' 1;
+    /* 暗色下轻微的径向渐变，营造 Grafana 式的层次感 */
+    background-image:
+      radial-gradient(1200px 600px at 15% -10%, rgba(91, 140, 255, 0.09), transparent 60%),
+      radial-gradient(900px 500px at 90% 0%, rgba(61, 220, 151, 0.05), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+
+  /* 滚动条：暗色细条 */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #333c4e transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-ink-700;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-ink-600;
+  }
+
+  /* 数字统一用等宽，表格里对齐更专业 */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+}
+
+@layer components {
+  /* 面板：暗色卡片的基础容器 */
+  .panel {
+    @apply rounded-xl border border-ink-750/90 bg-ink-850/70 shadow-panel backdrop-blur-sm;
+  }
+
+  .panel-header {
+    @apply flex items-start justify-between gap-3 border-b border-ink-750/70 px-4 py-3;
+  }
+
+  .panel-title {
+    @apply text-[13px] font-semibold tracking-wide text-ink-100;
+  }
+
+  .panel-sub {
+    @apply mt-0.5 text-[11px] leading-relaxed text-ink-400;
+  }
+
+  /* 分段控制器（切换实验 / 切换视图） */
+  .seg {
+    @apply inline-flex items-center gap-0.5 rounded-lg border border-ink-750 bg-ink-900/80 p-0.5;
+  }
+
+  .seg-item {
+    @apply rounded-md px-2.5 py-1 text-[11px] font-medium text-ink-400 transition-colors duration-150
+      hover:text-ink-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-accent/60;
+  }
+
+  .seg-item-active {
+    @apply bg-ink-700/90 text-ink-100 shadow-sm;
+  }
+
+  /* 小徽章 */
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-medium leading-none;
+  }
+
+  /* 骨架屏微光 */
+  .skeleton {
+    @apply rounded bg-gradient-to-r from-ink-800 via-ink-750 to-ink-800 bg-[length:200%_100%] animate-shimmer;
+  }
+}

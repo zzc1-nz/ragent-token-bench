@@ -1,0 +1,8218 @@
+{
+  "runId": "RUN_20261111_191201",
+  "generatedAt": "2026-11-11T19:12:15.3131522+08:00",
+  "llmClient": "deterministic-local",
+  "dataset": {
+    "docs": 200,
+    "queries": 500,
+    "conversations": 250,
+    "turns": 500
+  },
+  "experiments": [
+    {
+      "experimentId": "A_BASELINE",
+      "displayName": "基线：固定分块 + 仅向量 + 固定高档模型",
+      "chunkStrategy": "FIXED_SIZE",
+      "retrievalStrategy": "VECTOR_ONLY",
+      "routingStrategy": "FIXED_PREMIUM",
+      "cacheStrategy": "DISABLED",
+      "inputTokens": 2679369,
+      "outputTokens": 239463,
+      "totalTokens": 2918832,
+      "cachedInputTokens": 0,
+      "cacheHitRate": 0.0,
+      "cachedTokenRatio": 0.0,
+      "totalCostUsd": 3.9018,
+      "totalLatencyMs": 28008,
+      "avgLatencyMs": 56.0,
+      "turns": 500,
+      "chunkCount": 1411,
+      "qualityScore": 0.4188,
+      "qualityScorePct": 41.9,
+      "tokensPerTurn": 5837.7,
+      "costPerTurnUsd": 0.007804,
+      "inputTokensPerTurn": 5358.7,
+      "outputTokensPerTurn": 478.9,
+      "stages": [
+        {
+          "stage": "GENERATE",
+          "calls": 500,
+          "inputTokens": 1720410,
+          "outputTokens": 106897,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 2.577598,
+          "totalLatencyMs": 529
+        },
+        {
+          "stage": "EMBED",
+          "calls": 89,
+          "inputTokens": 383949,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.007679,
+          "totalLatencyMs": 106
+        },
+        {
+          "stage": "JUDGE",
+          "calls": 426,
+          "inputTokens": 186659,
+          "outputTokens": 58459,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.504594,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "INTENT",
+          "calls": 500,
+          "inputTokens": 206192,
+          "outputTokens": 28067,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.382152,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "REWRITE",
+          "calls": 426,
+          "inputTokens": 173886,
+          "outputTokens": 46040,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.429655,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "RETRIEVE_VECTOR",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 8520
+        },
+        {
+          "stage": "PARSE",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 201
+        },
+        {
+          "stage": "CHUNK",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 260
+        },
+        {
+          "stage": "FUSION",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 8520
+        },
+        {
+          "stage": "RERANK",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 8520
+        }
+      ],
+      "tokensByModel": {
+        "local": 0,
+        "text-embedding-v4": 392222,
+        "qwen3.8": 2526610,
+        "qwen3-rerank": 0
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "cumulativeTokens": 0,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 18,
+          "cumulativeTokens": 8575,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 36,
+          "cumulativeTokens": 20648,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 54,
+          "cumulativeTokens": 33319,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 72,
+          "cumulativeTokens": 41469,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 90,
+          "cumulativeTokens": 53631,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 108,
+          "cumulativeTokens": 67003,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 126,
+          "cumulativeTokens": 85768,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 144,
+          "cumulativeTokens": 99692,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 162,
+          "cumulativeTokens": 118229,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 180,
+          "cumulativeTokens": 131940,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 198,
+          "cumulativeTokens": 150620,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 216,
+          "cumulativeTokens": 163990,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 234,
+          "cumulativeTokens": 177185,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 252,
+          "cumulativeTokens": 190104,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 270,
+          "cumulativeTokens": 208058,
+          "stage": "EMBED",
+          "tokens": 4731
+        },
+        {
+          "t": 288,
+          "cumulativeTokens": 221313,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 306,
+          "cumulativeTokens": 232888,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 324,
+          "cumulativeTokens": 248134,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 342,
+          "cumulativeTokens": 263504,
+          "stage": "EMBED",
+          "tokens": 3829
+        },
+        {
+          "t": 360,
+          "cumulativeTokens": 275097,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 378,
+          "cumulativeTokens": 290485,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 396,
+          "cumulativeTokens": 302546,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 414,
+          "cumulativeTokens": 321489,
+          "stage": "EMBED",
+          "tokens": 4710
+        },
+        {
+          "t": 432,
+          "cumulativeTokens": 335877,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 450,
+          "cumulativeTokens": 350164,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 468,
+          "cumulativeTokens": 364304,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 486,
+          "cumulativeTokens": 378522,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 504,
+          "cumulativeTokens": 395310,
+          "stage": "GENERATE",
+          "tokens": 543
+        },
+        {
+          "t": 522,
+          "cumulativeTokens": 408056,
+          "stage": "REWRITE",
+          "tokens": 468
+        },
+        {
+          "t": 540,
+          "cumulativeTokens": 423479,
+          "stage": "GENERATE",
+          "tokens": 4117
+        },
+        {
+          "t": 558,
+          "cumulativeTokens": 437028,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 14
+        },
+        {
+          "t": 576,
+          "cumulativeTokens": 453369,
+          "stage": "JUDGE",
+          "tokens": 559
+        },
+        {
+          "t": 594,
+          "cumulativeTokens": 466627,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 612,
+          "cumulativeTokens": 481904,
+          "stage": "INTENT",
+          "tokens": 468
+        },
+        {
+          "t": 630,
+          "cumulativeTokens": 492138,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 648,
+          "cumulativeTokens": 508184,
+          "stage": "INTENT",
+          "tokens": 459
+        },
+        {
+          "t": 666,
+          "cumulativeTokens": 520469,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 684,
+          "cumulativeTokens": 538040,
+          "stage": "REWRITE",
+          "tokens": 456
+        },
+        {
+          "t": 702,
+          "cumulativeTokens": 553910,
+          "stage": "GENERATE",
+          "tokens": 4553
+        },
+        {
+          "t": 720,
+          "cumulativeTokens": 566923,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 738,
+          "cumulativeTokens": 581932,
+          "stage": "JUDGE",
+          "tokens": 501
+        },
+        {
+          "t": 756,
+          "cumulativeTokens": 593743,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 774,
+          "cumulativeTokens": 610224,
+          "stage": "INTENT",
+          "tokens": 471
+        },
+        {
+          "t": 792,
+          "cumulativeTokens": 622140,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 810,
+          "cumulativeTokens": 639713,
+          "stage": "REWRITE",
+          "tokens": 462
+        },
+        {
+          "t": 828,
+          "cumulativeTokens": 655822,
+          "stage": "GENERATE",
+          "tokens": 3777
+        },
+        {
+          "t": 846,
+          "cumulativeTokens": 667876,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 18
+        },
+        {
+          "t": 864,
+          "cumulativeTokens": 683259,
+          "stage": "JUDGE",
+          "tokens": 543
+        },
+        {
+          "t": 882,
+          "cumulativeTokens": 695721,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 900,
+          "cumulativeTokens": 712973,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 918,
+          "cumulativeTokens": 725602,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 936,
+          "cumulativeTokens": 743613,
+          "stage": "REWRITE",
+          "tokens": 469
+        },
+        {
+          "t": 954,
+          "cumulativeTokens": 758089,
+          "stage": "GENERATE",
+          "tokens": 3741
+        },
+        {
+          "t": 972,
+          "cumulativeTokens": 770235,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 21
+        },
+        {
+          "t": 990,
+          "cumulativeTokens": 785826,
+          "stage": "JUDGE",
+          "tokens": 589
+        },
+        {
+          "t": 1008,
+          "cumulativeTokens": 798679,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1026,
+          "cumulativeTokens": 813458,
+          "stage": "GENERATE",
+          "tokens": 554
+        },
+        {
+          "t": 1044,
+          "cumulativeTokens": 827076,
+          "stage": "GENERATE",
+          "tokens": 558
+        },
+        {
+          "t": 1062,
+          "cumulativeTokens": 841466,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 1080,
+          "cumulativeTokens": 853018,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1098,
+          "cumulativeTokens": 871197,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 1116,
+          "cumulativeTokens": 883518,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1134,
+          "cumulativeTokens": 901007,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 1152,
+          "cumulativeTokens": 917475,
+          "stage": "GENERATE",
+          "tokens": 3870
+        },
+        {
+          "t": 1170,
+          "cumulativeTokens": 930752,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 29
+        },
+        {
+          "t": 1188,
+          "cumulativeTokens": 948512,
+          "stage": "JUDGE",
+          "tokens": 628
+        },
+        {
+          "t": 1206,
+          "cumulativeTokens": 961006,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1224,
+          "cumulativeTokens": 978488,
+          "stage": "INTENT",
+          "tokens": 467
+        },
+        {
+          "t": 1242,
+          "cumulativeTokens": 991946,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 1260,
+          "cumulativeTokens": 1004173,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1278,
+          "cumulativeTokens": 1022937,
+          "stage": "REWRITE",
+          "tokens": 471
+        },
+        {
+          "t": 1296,
+          "cumulativeTokens": 1035043,
+          "stage": "REWRITE",
+          "tokens": 475
+        },
+        {
+          "t": 1314,
+          "cumulativeTokens": 1051445,
+          "stage": "GENERATE",
+          "tokens": 4675
+        },
+        {
+          "t": 1332,
+          "cumulativeTokens": 1064456,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 28
+        },
+        {
+          "t": 1350,
+          "cumulativeTokens": 1081179,
+          "stage": "JUDGE",
+          "tokens": 596
+        },
+        {
+          "t": 1368,
+          "cumulativeTokens": 1094784,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1386,
+          "cumulativeTokens": 1111182,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 1404,
+          "cumulativeTokens": 1123989,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1422,
+          "cumulativeTokens": 1140581,
+          "stage": "REWRITE",
+          "tokens": 477
+        },
+        {
+          "t": 1440,
+          "cumulativeTokens": 1157748,
+          "stage": "GENERATE",
+          "tokens": 4659
+        },
+        {
+          "t": 1458,
+          "cumulativeTokens": 1171249,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 22
+        },
+        {
+          "t": 1476,
+          "cumulativeTokens": 1186404,
+          "stage": "JUDGE",
+          "tokens": 575
+        },
+        {
+          "t": 1494,
+          "cumulativeTokens": 1199594,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1512,
+          "cumulativeTokens": 1216206,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 1530,
+          "cumulativeTokens": 1230679,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 1548,
+          "cumulativeTokens": 1244505,
+          "stage": "INTENT",
+          "tokens": 467
+        },
+        {
+          "t": 1566,
+          "cumulativeTokens": 1255533,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1584,
+          "cumulativeTokens": 1273210,
+          "stage": "REWRITE",
+          "tokens": 475
+        },
+        {
+          "t": 1602,
+          "cumulativeTokens": 1286045,
+          "stage": "REWRITE",
+          "tokens": 473
+        },
+        {
+          "t": 1620,
+          "cumulativeTokens": 1303167,
+          "stage": "GENERATE",
+          "tokens": 4655
+        },
+        {
+          "t": 1638,
+          "cumulativeTokens": 1316572,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 17
+        },
+        {
+          "t": 1656,
+          "cumulativeTokens": 1333104,
+          "stage": "JUDGE",
+          "tokens": 578
+        },
+        {
+          "t": 1674,
+          "cumulativeTokens": 1345285,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1692,
+          "cumulativeTokens": 1358828,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1710,
+          "cumulativeTokens": 1375803,
+          "stage": "INTENT",
+          "tokens": 460
+        },
+        {
+          "t": 1728,
+          "cumulativeTokens": 1387677,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1746,
+          "cumulativeTokens": 1405407,
+          "stage": "REWRITE",
+          "tokens": 468
+        },
+        {
+          "t": 1764,
+          "cumulativeTokens": 1421887,
+          "stage": "GENERATE",
+          "tokens": 4390
+        },
+        {
+          "t": 1782,
+          "cumulativeTokens": 1435189,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 26
+        },
+        {
+          "t": 1800,
+          "cumulativeTokens": 1451666,
+          "stage": "JUDGE",
+          "tokens": 529
+        },
+        {
+          "t": 1818,
+          "cumulativeTokens": 1464659,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1836,
+          "cumulativeTokens": 1481695,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 1854,
+          "cumulativeTokens": 1494261,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1872,
+          "cumulativeTokens": 1512288,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 1890,
+          "cumulativeTokens": 1528156,
+          "stage": "GENERATE",
+          "tokens": 4073
+        },
+        {
+          "t": 1908,
+          "cumulativeTokens": 1541183,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 27
+        },
+        {
+          "t": 1926,
+          "cumulativeTokens": 1557699,
+          "stage": "JUDGE",
+          "tokens": 561
+        },
+        {
+          "t": 1944,
+          "cumulativeTokens": 1570162,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1962,
+          "cumulativeTokens": 1587088,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 1980,
+          "cumulativeTokens": 1599859,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1998,
+          "cumulativeTokens": 1617904,
+          "stage": "GENERATE",
+          "tokens": 548
+        },
+        {
+          "t": 2016,
+          "cumulativeTokens": 1631108,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 2034,
+          "cumulativeTokens": 1647156,
+          "stage": "GENERATE",
+          "tokens": 4468
+        },
+        {
+          "t": 2052,
+          "cumulativeTokens": 1660625,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 23
+        },
+        {
+          "t": 2070,
+          "cumulativeTokens": 1677280,
+          "stage": "JUDGE",
+          "tokens": 629
+        },
+        {
+          "t": 2088,
+          "cumulativeTokens": 1690306,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2106,
+          "cumulativeTokens": 1704516,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2124,
+          "cumulativeTokens": 1718594,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2142,
+          "cumulativeTokens": 1735164,
+          "stage": "INTENT",
+          "tokens": 471
+        },
+        {
+          "t": 2160,
+          "cumulativeTokens": 1747425,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2178,
+          "cumulativeTokens": 1762891,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 2196,
+          "cumulativeTokens": 1775301,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2214,
+          "cumulativeTokens": 1793170,
+          "stage": "REWRITE",
+          "tokens": 472
+        },
+        {
+          "t": 2232,
+          "cumulativeTokens": 1809670,
+          "stage": "GENERATE",
+          "tokens": 4380
+        },
+        {
+          "t": 2250,
+          "cumulativeTokens": 1821793,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 11
+        },
+        {
+          "t": 2268,
+          "cumulativeTokens": 1835388,
+          "stage": "JUDGE",
+          "tokens": 481
+        },
+        {
+          "t": 2286,
+          "cumulativeTokens": 1847518,
+          "stage": "JUDGE",
+          "tokens": 540
+        },
+        {
+          "t": 2304,
+          "cumulativeTokens": 1859327,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2322,
+          "cumulativeTokens": 1873905,
+          "stage": "INTENT",
+          "tokens": 464
+        },
+        {
+          "t": 2340,
+          "cumulativeTokens": 1885806,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2358,
+          "cumulativeTokens": 1903033,
+          "stage": "REWRITE",
+          "tokens": 446
+        },
+        {
+          "t": 2376,
+          "cumulativeTokens": 1916004,
+          "stage": "GENERATE",
+          "tokens": 3457
+        },
+        {
+          "t": 2394,
+          "cumulativeTokens": 1928096,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 18
+        },
+        {
+          "t": 2412,
+          "cumulativeTokens": 1943600,
+          "stage": "JUDGE",
+          "tokens": 521
+        },
+        {
+          "t": 2430,
+          "cumulativeTokens": 1956183,
+          "stage": "JUDGE",
+          "tokens": 520
+        },
+        {
+          "t": 2448,
+          "cumulativeTokens": 1967707,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2466,
+          "cumulativeTokens": 1985232,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 2484,
+          "cumulativeTokens": 1995924,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2502,
+          "cumulativeTokens": 2011191,
+          "stage": "REWRITE",
+          "tokens": 463
+        },
+        {
+          "t": 2520,
+          "cumulativeTokens": 2025595,
+          "stage": "GENERATE",
+          "tokens": 3964
+        },
+        {
+          "t": 2538,
+          "cumulativeTokens": 2038447,
+          "stage": "GENERATE",
+          "tokens": 3613
+        },
+        {
+          "t": 2556,
+          "cumulativeTokens": 2050231,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 2574,
+          "cumulativeTokens": 2067108,
+          "stage": "JUDGE",
+          "tokens": 667
+        },
+        {
+          "t": 2592,
+          "cumulativeTokens": 2079153,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2610,
+          "cumulativeTokens": 2091714,
+          "stage": "GENERATE",
+          "tokens": 551
+        },
+        {
+          "t": 2628,
+          "cumulativeTokens": 2103202,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2646,
+          "cumulativeTokens": 2118471,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 2664,
+          "cumulativeTokens": 2129298,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2682,
+          "cumulativeTokens": 2145012,
+          "stage": "GENERATE",
+          "tokens": 546
+        },
+        {
+          "t": 2700,
+          "cumulativeTokens": 2159533,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 2718,
+          "cumulativeTokens": 2173670,
+          "stage": "GENERATE",
+          "tokens": 3032
+        },
+        {
+          "t": 2736,
+          "cumulativeTokens": 2185029,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 26
+        },
+        {
+          "t": 2754,
+          "cumulativeTokens": 2200022,
+          "stage": "JUDGE",
+          "tokens": 547
+        },
+        {
+          "t": 2772,
+          "cumulativeTokens": 2212398,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2790,
+          "cumulativeTokens": 2224810,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2808,
+          "cumulativeTokens": 2241019,
+          "stage": "INTENT",
+          "tokens": 470
+        },
+        {
+          "t": 2826,
+          "cumulativeTokens": 2254797,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 2844,
+          "cumulativeTokens": 2266977,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2862,
+          "cumulativeTokens": 2284695,
+          "stage": "REWRITE",
+          "tokens": 466
+        },
+        {
+          "t": 2880,
+          "cumulativeTokens": 2301009,
+          "stage": "GENERATE",
+          "tokens": 4305
+        },
+        {
+          "t": 2898,
+          "cumulativeTokens": 2312672,
+          "stage": "REWRITE",
+          "tokens": 479
+        },
+        {
+          "t": 2916,
+          "cumulativeTokens": 2330188,
+          "stage": "GENERATE",
+          "tokens": 4704
+        },
+        {
+          "t": 2934,
+          "cumulativeTokens": 2344331,
+          "stage": "GENERATE",
+          "tokens": 4451
+        },
+        {
+          "t": 2952,
+          "cumulativeTokens": 2358025,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 22
+        },
+        {
+          "t": 2970,
+          "cumulativeTokens": 2374890,
+          "stage": "JUDGE",
+          "tokens": 655
+        },
+        {
+          "t": 2988,
+          "cumulativeTokens": 2388926,
+          "stage": "JUDGE",
+          "tokens": 664
+        },
+        {
+          "t": 3006,
+          "cumulativeTokens": 2403707,
+          "stage": "JUDGE",
+          "tokens": 612
+        },
+        {
+          "t": 3024,
+          "cumulativeTokens": 2417053,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3042,
+          "cumulativeTokens": 2434472,
+          "stage": "INTENT",
+          "tokens": 467
+        },
+        {
+          "t": 3060,
+          "cumulativeTokens": 2448337,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 3078,
+          "cumulativeTokens": 2461029,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3096,
+          "cumulativeTokens": 2479787,
+          "stage": "REWRITE",
+          "tokens": 465
+        },
+        {
+          "t": 3114,
+          "cumulativeTokens": 2496678,
+          "stage": "GENERATE",
+          "tokens": 4472
+        },
+        {
+          "t": 3132,
+          "cumulativeTokens": 2510150,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 22
+        },
+        {
+          "t": 3150,
+          "cumulativeTokens": 2526967,
+          "stage": "JUDGE",
+          "tokens": 652
+        },
+        {
+          "t": 3168,
+          "cumulativeTokens": 2539861,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3186,
+          "cumulativeTokens": 2558438,
+          "stage": "INTENT",
+          "tokens": 468
+        },
+        {
+          "t": 3204,
+          "cumulativeTokens": 2572209,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 3222,
+          "cumulativeTokens": 2584841,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3240,
+          "cumulativeTokens": 2602717,
+          "stage": "REWRITE",
+          "tokens": 476
+        },
+        {
+          "t": 3258,
+          "cumulativeTokens": 2619603,
+          "stage": "GENERATE",
+          "tokens": 4743
+        },
+        {
+          "t": 3276,
+          "cumulativeTokens": 2633790,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 21
+        },
+        {
+          "t": 3294,
+          "cumulativeTokens": 2650802,
+          "stage": "JUDGE",
+          "tokens": 646
+        },
+        {
+          "t": 3312,
+          "cumulativeTokens": 2664717,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 3330,
+          "cumulativeTokens": 2677871,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3348,
+          "cumulativeTokens": 2695778,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 3366,
+          "cumulativeTokens": 2708787,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3384,
+          "cumulativeTokens": 2722843,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3402,
+          "cumulativeTokens": 2740648,
+          "stage": "GENERATE",
+          "tokens": 547
+        },
+        {
+          "t": 3420,
+          "cumulativeTokens": 2754603,
+          "stage": "REWRITE",
+          "tokens": 472
+        },
+        {
+          "t": 3438,
+          "cumulativeTokens": 2770648,
+          "stage": "GENERATE",
+          "tokens": 4129
+        },
+        {
+          "t": 3456,
+          "cumulativeTokens": 2783866,
+          "stage": "GENERATE",
+          "tokens": 4060
+        },
+        {
+          "t": 3474,
+          "cumulativeTokens": 2796964,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 18
+        },
+        {
+          "t": 3492,
+          "cumulativeTokens": 2813550,
+          "stage": "JUDGE",
+          "tokens": 552
+        },
+        {
+          "t": 3510,
+          "cumulativeTokens": 2826997,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3528,
+          "cumulativeTokens": 2844355,
+          "stage": "INTENT",
+          "tokens": 468
+        },
+        {
+          "t": 3546,
+          "cumulativeTokens": 2855747,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3564,
+          "cumulativeTokens": 2872315,
+          "stage": "REWRITE",
+          "tokens": 461
+        },
+        {
+          "t": 3582,
+          "cumulativeTokens": 2888109,
+          "stage": "GENERATE",
+          "tokens": 4647
+        },
+        {
+          "t": 3600,
+          "cumulativeTokens": 2901614,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 3618,
+          "cumulativeTokens": 2918832,
+          "stage": "JUDGE",
+          "tokens": 630
+        }
+      ]
+    },
+    {
+      "experimentId": "B_SEMANTIC",
+      "displayName": "只改分块：语义分块 + 仅向量 + 固定高档模型",
+      "chunkStrategy": "SEMANTIC",
+      "retrievalStrategy": "VECTOR_ONLY",
+      "routingStrategy": "FIXED_PREMIUM",
+      "cacheStrategy": "DISABLED",
+      "inputTokens": 2021485,
+      "outputTokens": 247057,
+      "totalTokens": 2268542,
+      "cachedInputTokens": 0,
+      "cacheHitRate": 0.0,
+      "cachedTokenRatio": 0.0,
+      "totalCostUsd": 3.165,
+      "totalLatencyMs": 17725,
+      "avgLatencyMs": 35.5,
+      "turns": 500,
+      "chunkCount": 1220,
+      "qualityScore": 0.4195,
+      "qualityScorePct": 42.0,
+      "tokensPerTurn": 4537.1,
+      "costPerTurnUsd": 0.00633,
+      "inputTokensPerTurn": 4043.0,
+      "outputTokensPerTurn": 494.1,
+      "stages": [
+        {
+          "stage": "GENERATE",
+          "calls": 500,
+          "inputTokens": 1066727,
+          "outputTokens": 114513,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.829735,
+          "totalLatencyMs": 512
+        },
+        {
+          "stage": "EMBED",
+          "calls": 77,
+          "inputTokens": 370243,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.007405,
+          "totalLatencyMs": 77
+        },
+        {
+          "stage": "JUDGE",
+          "calls": 426,
+          "inputTokens": 194263,
+          "outputTokens": 58437,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.513613,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "INTENT",
+          "calls": 500,
+          "inputTokens": 206192,
+          "outputTokens": 28067,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.382152,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "REWRITE",
+          "calls": 426,
+          "inputTokens": 175787,
+          "outputTokens": 46040,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.431936,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "RETRIEVE_VECTOR",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 5112
+        },
+        {
+          "stage": "PARSE",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 200
+        },
+        {
+          "stage": "CHUNK",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 248
+        },
+        {
+          "stage": "FUSION",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 5112
+        },
+        {
+          "stage": "RERANK",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 5112
+        }
+      ],
+      "tokensByModel": {
+        "local": 0,
+        "text-embedding-v4": 378516,
+        "qwen3.8": 1890026,
+        "qwen3-rerank": 0
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "cumulativeTokens": 0,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 18,
+          "cumulativeTokens": 10836,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 36,
+          "cumulativeTokens": 21676,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 54,
+          "cumulativeTokens": 32474,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 72,
+          "cumulativeTokens": 42130,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 90,
+          "cumulativeTokens": 51835,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 108,
+          "cumulativeTokens": 66452,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 126,
+          "cumulativeTokens": 86933,
+          "stage": "EMBED",
+          "tokens": 5161
+        },
+        {
+          "t": 144,
+          "cumulativeTokens": 97196,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 162,
+          "cumulativeTokens": 117741,
+          "stage": "EMBED",
+          "tokens": 5130
+        },
+        {
+          "t": 180,
+          "cumulativeTokens": 133109,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 198,
+          "cumulativeTokens": 148264,
+          "stage": "EMBED",
+          "tokens": 4925
+        },
+        {
+          "t": 216,
+          "cumulativeTokens": 158240,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 234,
+          "cumulativeTokens": 173016,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 252,
+          "cumulativeTokens": 187810,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 270,
+          "cumulativeTokens": 202927,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 288,
+          "cumulativeTokens": 217301,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 306,
+          "cumulativeTokens": 232902,
+          "stage": "EMBED",
+          "tokens": 3913
+        },
+        {
+          "t": 324,
+          "cumulativeTokens": 244944,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 342,
+          "cumulativeTokens": 257125,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 360,
+          "cumulativeTokens": 273419,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 378,
+          "cumulativeTokens": 285623,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 396,
+          "cumulativeTokens": 300099,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 414,
+          "cumulativeTokens": 315870,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 432,
+          "cumulativeTokens": 331505,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 450,
+          "cumulativeTokens": 347648,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 468,
+          "cumulativeTokens": 363625,
+          "stage": "EMBED",
+          "tokens": 5342
+        },
+        {
+          "t": 486,
+          "cumulativeTokens": 375475,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 17
+        },
+        {
+          "t": 504,
+          "cumulativeTokens": 386023,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 15
+        },
+        {
+          "t": 522,
+          "cumulativeTokens": 398050,
+          "stage": "JUDGE",
+          "tokens": 544
+        },
+        {
+          "t": 540,
+          "cumulativeTokens": 408150,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 558,
+          "cumulativeTokens": 422274,
+          "stage": "INTENT",
+          "tokens": 462
+        },
+        {
+          "t": 576,
+          "cumulativeTokens": 432109,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 594,
+          "cumulativeTokens": 445659,
+          "stage": "REWRITE",
+          "tokens": 457
+        },
+        {
+          "t": 612,
+          "cumulativeTokens": 456790,
+          "stage": "GENERATE",
+          "tokens": 555
+        },
+        {
+          "t": 630,
+          "cumulativeTokens": 467141,
+          "stage": "REWRITE",
+          "tokens": 473
+        },
+        {
+          "t": 648,
+          "cumulativeTokens": 479729,
+          "stage": "GENERATE",
+          "tokens": 3503
+        },
+        {
+          "t": 666,
+          "cumulativeTokens": 490877,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 684,
+          "cumulativeTokens": 504406,
+          "stage": "JUDGE",
+          "tokens": 567
+        },
+        {
+          "t": 702,
+          "cumulativeTokens": 514867,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 720,
+          "cumulativeTokens": 527699,
+          "stage": "INTENT",
+          "tokens": 463
+        },
+        {
+          "t": 738,
+          "cumulativeTokens": 536970,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 756,
+          "cumulativeTokens": 549891,
+          "stage": "REWRITE",
+          "tokens": 446
+        },
+        {
+          "t": 774,
+          "cumulativeTokens": 562589,
+          "stage": "GENERATE",
+          "tokens": 3468
+        },
+        {
+          "t": 792,
+          "cumulativeTokens": 573918,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 19
+        },
+        {
+          "t": 810,
+          "cumulativeTokens": 586849,
+          "stage": "JUDGE",
+          "tokens": 598
+        },
+        {
+          "t": 828,
+          "cumulativeTokens": 596680,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 846,
+          "cumulativeTokens": 608805,
+          "stage": "INTENT",
+          "tokens": 468
+        },
+        {
+          "t": 864,
+          "cumulativeTokens": 618205,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 882,
+          "cumulativeTokens": 632219,
+          "stage": "REWRITE",
+          "tokens": 460
+        },
+        {
+          "t": 900,
+          "cumulativeTokens": 645063,
+          "stage": "GENERATE",
+          "tokens": 3086
+        },
+        {
+          "t": 918,
+          "cumulativeTokens": 656195,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 23
+        },
+        {
+          "t": 936,
+          "cumulativeTokens": 668978,
+          "stage": "JUDGE",
+          "tokens": 547
+        },
+        {
+          "t": 954,
+          "cumulativeTokens": 677818,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 972,
+          "cumulativeTokens": 690047,
+          "stage": "INTENT",
+          "tokens": 464
+        },
+        {
+          "t": 990,
+          "cumulativeTokens": 700333,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1008,
+          "cumulativeTokens": 714633,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 1026,
+          "cumulativeTokens": 723435,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1044,
+          "cumulativeTokens": 734744,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1062,
+          "cumulativeTokens": 745786,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1080,
+          "cumulativeTokens": 758623,
+          "stage": "REWRITE",
+          "tokens": 468
+        },
+        {
+          "t": 1098,
+          "cumulativeTokens": 770853,
+          "stage": "GENERATE",
+          "tokens": 2527
+        },
+        {
+          "t": 1116,
+          "cumulativeTokens": 781024,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 21
+        },
+        {
+          "t": 1134,
+          "cumulativeTokens": 793300,
+          "stage": "JUDGE",
+          "tokens": 657
+        },
+        {
+          "t": 1152,
+          "cumulativeTokens": 802712,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1170,
+          "cumulativeTokens": 815662,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 1188,
+          "cumulativeTokens": 825276,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1206,
+          "cumulativeTokens": 838359,
+          "stage": "REWRITE",
+          "tokens": 479
+        },
+        {
+          "t": 1224,
+          "cumulativeTokens": 849434,
+          "stage": "REWRITE",
+          "tokens": 476
+        },
+        {
+          "t": 1242,
+          "cumulativeTokens": 860425,
+          "stage": "GENERATE",
+          "tokens": 2557
+        },
+        {
+          "t": 1260,
+          "cumulativeTokens": 871371,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 28
+        },
+        {
+          "t": 1278,
+          "cumulativeTokens": 883590,
+          "stage": "JUDGE",
+          "tokens": 628
+        },
+        {
+          "t": 1296,
+          "cumulativeTokens": 894392,
+          "stage": "JUDGE",
+          "tokens": 618
+        },
+        {
+          "t": 1314,
+          "cumulativeTokens": 904320,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1332,
+          "cumulativeTokens": 916417,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 1350,
+          "cumulativeTokens": 926301,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1368,
+          "cumulativeTokens": 939433,
+          "stage": "REWRITE",
+          "tokens": 476
+        },
+        {
+          "t": 1386,
+          "cumulativeTokens": 951065,
+          "stage": "GENERATE",
+          "tokens": 2818
+        },
+        {
+          "t": 1404,
+          "cumulativeTokens": 961662,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 29
+        },
+        {
+          "t": 1422,
+          "cumulativeTokens": 973132,
+          "stage": "JUDGE",
+          "tokens": 614
+        },
+        {
+          "t": 1440,
+          "cumulativeTokens": 983984,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1458,
+          "cumulativeTokens": 996186,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 1476,
+          "cumulativeTokens": 1005762,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1494,
+          "cumulativeTokens": 1018714,
+          "stage": "REWRITE",
+          "tokens": 477
+        },
+        {
+          "t": 1512,
+          "cumulativeTokens": 1029347,
+          "stage": "REWRITE",
+          "tokens": 472
+        },
+        {
+          "t": 1530,
+          "cumulativeTokens": 1040885,
+          "stage": "REWRITE",
+          "tokens": 471
+        },
+        {
+          "t": 1548,
+          "cumulativeTokens": 1051754,
+          "stage": "GENERATE",
+          "tokens": 2765
+        },
+        {
+          "t": 1566,
+          "cumulativeTokens": 1062254,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 24
+        },
+        {
+          "t": 1584,
+          "cumulativeTokens": 1074309,
+          "stage": "JUDGE",
+          "tokens": 579
+        },
+        {
+          "t": 1602,
+          "cumulativeTokens": 1084757,
+          "stage": "JUDGE",
+          "tokens": 610
+        },
+        {
+          "t": 1620,
+          "cumulativeTokens": 1095396,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1638,
+          "cumulativeTokens": 1107510,
+          "stage": "INTENT",
+          "tokens": 464
+        },
+        {
+          "t": 1656,
+          "cumulativeTokens": 1116547,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1674,
+          "cumulativeTokens": 1128965,
+          "stage": "GENERATE",
+          "tokens": 538
+        },
+        {
+          "t": 1692,
+          "cumulativeTokens": 1139601,
+          "stage": "REWRITE",
+          "tokens": 464
+        },
+        {
+          "t": 1710,
+          "cumulativeTokens": 1151009,
+          "stage": "GENERATE",
+          "tokens": 2620
+        },
+        {
+          "t": 1728,
+          "cumulativeTokens": 1160893,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 1746,
+          "cumulativeTokens": 1172399,
+          "stage": "JUDGE",
+          "tokens": 587
+        },
+        {
+          "t": 1764,
+          "cumulativeTokens": 1181687,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1782,
+          "cumulativeTokens": 1193608,
+          "stage": "INTENT",
+          "tokens": 471
+        },
+        {
+          "t": 1800,
+          "cumulativeTokens": 1202813,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1818,
+          "cumulativeTokens": 1216250,
+          "stage": "REWRITE",
+          "tokens": 481
+        },
+        {
+          "t": 1836,
+          "cumulativeTokens": 1227010,
+          "stage": "GENERATE",
+          "tokens": 2372
+        },
+        {
+          "t": 1854,
+          "cumulativeTokens": 1237244,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 28
+        },
+        {
+          "t": 1872,
+          "cumulativeTokens": 1248835,
+          "stage": "JUDGE",
+          "tokens": 618
+        },
+        {
+          "t": 1890,
+          "cumulativeTokens": 1258060,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1908,
+          "cumulativeTokens": 1270251,
+          "stage": "INTENT",
+          "tokens": 467
+        },
+        {
+          "t": 1926,
+          "cumulativeTokens": 1279753,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1944,
+          "cumulativeTokens": 1292482,
+          "stage": "REWRITE",
+          "tokens": 472
+        },
+        {
+          "t": 1962,
+          "cumulativeTokens": 1303358,
+          "stage": "GENERATE",
+          "tokens": 2571
+        },
+        {
+          "t": 1980,
+          "cumulativeTokens": 1313260,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 26
+        },
+        {
+          "t": 1998,
+          "cumulativeTokens": 1323436,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 26
+        },
+        {
+          "t": 2016,
+          "cumulativeTokens": 1335095,
+          "stage": "JUDGE",
+          "tokens": 567
+        },
+        {
+          "t": 2034,
+          "cumulativeTokens": 1344527,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2052,
+          "cumulativeTokens": 1357225,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 2070,
+          "cumulativeTokens": 1366126,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2088,
+          "cumulativeTokens": 1378971,
+          "stage": "GENERATE",
+          "tokens": 545
+        },
+        {
+          "t": 2106,
+          "cumulativeTokens": 1389383,
+          "stage": "GENERATE",
+          "tokens": 551
+        },
+        {
+          "t": 2124,
+          "cumulativeTokens": 1399607,
+          "stage": "REWRITE",
+          "tokens": 473
+        },
+        {
+          "t": 2142,
+          "cumulativeTokens": 1410759,
+          "stage": "GENERATE",
+          "tokens": 2671
+        },
+        {
+          "t": 2160,
+          "cumulativeTokens": 1420791,
+          "stage": "REWRITE",
+          "tokens": 468
+        },
+        {
+          "t": 2178,
+          "cumulativeTokens": 1432574,
+          "stage": "GENERATE",
+          "tokens": 2624
+        },
+        {
+          "t": 2196,
+          "cumulativeTokens": 1442511,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 27
+        },
+        {
+          "t": 2214,
+          "cumulativeTokens": 1454226,
+          "stage": "JUDGE",
+          "tokens": 590
+        },
+        {
+          "t": 2232,
+          "cumulativeTokens": 1463447,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2250,
+          "cumulativeTokens": 1473355,
+          "stage": "INTENT",
+          "tokens": 464
+        },
+        {
+          "t": 2268,
+          "cumulativeTokens": 1483182,
+          "stage": "INTENT",
+          "tokens": 460
+        },
+        {
+          "t": 2286,
+          "cumulativeTokens": 1491255,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2304,
+          "cumulativeTokens": 1502690,
+          "stage": "REWRITE",
+          "tokens": 456
+        },
+        {
+          "t": 2322,
+          "cumulativeTokens": 1512469,
+          "stage": "GENERATE",
+          "tokens": 2484
+        },
+        {
+          "t": 2340,
+          "cumulativeTokens": 1522238,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 2358,
+          "cumulativeTokens": 1532198,
+          "stage": "JUDGE",
+          "tokens": 540
+        },
+        {
+          "t": 2376,
+          "cumulativeTokens": 1540877,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2394,
+          "cumulativeTokens": 1551962,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 2412,
+          "cumulativeTokens": 1562048,
+          "stage": "INTENT",
+          "tokens": 470
+        },
+        {
+          "t": 2430,
+          "cumulativeTokens": 1570586,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2448,
+          "cumulativeTokens": 1583323,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 2466,
+          "cumulativeTokens": 1593151,
+          "stage": "GENERATE",
+          "tokens": 1874
+        },
+        {
+          "t": 2484,
+          "cumulativeTokens": 1601817,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 25
+        },
+        {
+          "t": 2502,
+          "cumulativeTokens": 1612249,
+          "stage": "JUDGE",
+          "tokens": 490
+        },
+        {
+          "t": 2520,
+          "cumulativeTokens": 1622186,
+          "stage": "GENERATE",
+          "tokens": 546
+        },
+        {
+          "t": 2538,
+          "cumulativeTokens": 1630858,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2556,
+          "cumulativeTokens": 1641984,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 2574,
+          "cumulativeTokens": 1650845,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2592,
+          "cumulativeTokens": 1661442,
+          "stage": "GENERATE",
+          "tokens": 548
+        },
+        {
+          "t": 2610,
+          "cumulativeTokens": 1669088,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2628,
+          "cumulativeTokens": 1680563,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 2646,
+          "cumulativeTokens": 1690503,
+          "stage": "GENERATE",
+          "tokens": 2264
+        },
+        {
+          "t": 2664,
+          "cumulativeTokens": 1699709,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 22
+        },
+        {
+          "t": 2682,
+          "cumulativeTokens": 1709925,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 27
+        },
+        {
+          "t": 2700,
+          "cumulativeTokens": 1720342,
+          "stage": "JUDGE",
+          "tokens": 588
+        },
+        {
+          "t": 2718,
+          "cumulativeTokens": 1728206,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2736,
+          "cumulativeTokens": 1738992,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 2754,
+          "cumulativeTokens": 1747079,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2772,
+          "cumulativeTokens": 1759023,
+          "stage": "GENERATE",
+          "tokens": 545
+        },
+        {
+          "t": 2790,
+          "cumulativeTokens": 1768424,
+          "stage": "REWRITE",
+          "tokens": 476
+        },
+        {
+          "t": 2808,
+          "cumulativeTokens": 1779038,
+          "stage": "REWRITE",
+          "tokens": 473
+        },
+        {
+          "t": 2826,
+          "cumulativeTokens": 1789769,
+          "stage": "GENERATE",
+          "tokens": 2823
+        },
+        {
+          "t": 2844,
+          "cumulativeTokens": 1799962,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 17
+        },
+        {
+          "t": 2862,
+          "cumulativeTokens": 1811769,
+          "stage": "JUDGE",
+          "tokens": 643
+        },
+        {
+          "t": 2880,
+          "cumulativeTokens": 1822736,
+          "stage": "GENERATE",
+          "tokens": 551
+        },
+        {
+          "t": 2898,
+          "cumulativeTokens": 1833532,
+          "stage": "JUDGE",
+          "tokens": 632
+        },
+        {
+          "t": 2916,
+          "cumulativeTokens": 1844613,
+          "stage": "GENERATE",
+          "tokens": 547
+        },
+        {
+          "t": 2934,
+          "cumulativeTokens": 1854600,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2952,
+          "cumulativeTokens": 1866612,
+          "stage": "INTENT",
+          "tokens": 473
+        },
+        {
+          "t": 2970,
+          "cumulativeTokens": 1877669,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 2988,
+          "cumulativeTokens": 1887901,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 3006,
+          "cumulativeTokens": 1897568,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3024,
+          "cumulativeTokens": 1910265,
+          "stage": "REWRITE",
+          "tokens": 469
+        },
+        {
+          "t": 3042,
+          "cumulativeTokens": 1920458,
+          "stage": "REWRITE",
+          "tokens": 470
+        },
+        {
+          "t": 3060,
+          "cumulativeTokens": 1932384,
+          "stage": "GENERATE",
+          "tokens": 2812
+        },
+        {
+          "t": 3078,
+          "cumulativeTokens": 1942976,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 28
+        },
+        {
+          "t": 3096,
+          "cumulativeTokens": 1954915,
+          "stage": "JUDGE",
+          "tokens": 613
+        },
+        {
+          "t": 3114,
+          "cumulativeTokens": 1964890,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3132,
+          "cumulativeTokens": 1977048,
+          "stage": "INTENT",
+          "tokens": 473
+        },
+        {
+          "t": 3150,
+          "cumulativeTokens": 1986702,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3168,
+          "cumulativeTokens": 1999349,
+          "stage": "REWRITE",
+          "tokens": 466
+        },
+        {
+          "t": 3186,
+          "cumulativeTokens": 2009777,
+          "stage": "REWRITE",
+          "tokens": 477
+        },
+        {
+          "t": 3204,
+          "cumulativeTokens": 2021328,
+          "stage": "GENERATE",
+          "tokens": 2540
+        },
+        {
+          "t": 3222,
+          "cumulativeTokens": 2031300,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 30
+        },
+        {
+          "t": 3240,
+          "cumulativeTokens": 2043852,
+          "stage": "JUDGE",
+          "tokens": 670
+        },
+        {
+          "t": 3258,
+          "cumulativeTokens": 2053630,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3276,
+          "cumulativeTokens": 2066320,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 3294,
+          "cumulativeTokens": 2075670,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3312,
+          "cumulativeTokens": 2086396,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3330,
+          "cumulativeTokens": 2099692,
+          "stage": "REWRITE",
+          "tokens": 482
+        },
+        {
+          "t": 3348,
+          "cumulativeTokens": 2111469,
+          "stage": "GENERATE",
+          "tokens": 2968
+        },
+        {
+          "t": 3366,
+          "cumulativeTokens": 2122188,
+          "stage": "GENERATE",
+          "tokens": 2823
+        },
+        {
+          "t": 3384,
+          "cumulativeTokens": 2132383,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 17
+        },
+        {
+          "t": 3402,
+          "cumulativeTokens": 2142680,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 22
+        },
+        {
+          "t": 3420,
+          "cumulativeTokens": 2155212,
+          "stage": "JUDGE",
+          "tokens": 651
+        },
+        {
+          "t": 3438,
+          "cumulativeTokens": 2164885,
+          "stage": "GENERATE",
+          "tokens": 548
+        },
+        {
+          "t": 3456,
+          "cumulativeTokens": 2174283,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3474,
+          "cumulativeTokens": 2186600,
+          "stage": "INTENT",
+          "tokens": 465
+        },
+        {
+          "t": 3492,
+          "cumulativeTokens": 2195531,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3510,
+          "cumulativeTokens": 2209240,
+          "stage": "REWRITE",
+          "tokens": 461
+        },
+        {
+          "t": 3528,
+          "cumulativeTokens": 2221513,
+          "stage": "GENERATE",
+          "tokens": 2728
+        },
+        {
+          "t": 3546,
+          "cumulativeTokens": 2231221,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 3564,
+          "cumulativeTokens": 2242290,
+          "stage": "JUDGE",
+          "tokens": 655
+        },
+        {
+          "t": 3582,
+          "cumulativeTokens": 2252293,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3600,
+          "cumulativeTokens": 2264399,
+          "stage": "INTENT",
+          "tokens": 468
+        },
+        {
+          "t": 3606,
+          "cumulativeTokens": 2268542,
+          "stage": "JUDGE",
+          "tokens": 630
+        }
+      ]
+    },
+    {
+      "experimentId": "C_FUSION",
+      "displayName": "只改检索：固定分块 + 多路融合 + 固定高档模型",
+      "chunkStrategy": "FIXED_SIZE",
+      "retrievalStrategy": "MULTI_CHANNEL",
+      "routingStrategy": "FIXED_PREMIUM",
+      "cacheStrategy": "DISABLED",
+      "inputTokens": 2698827,
+      "outputTokens": 239213,
+      "totalTokens": 2938040,
+      "cachedInputTokens": 0,
+      "cacheHitRate": 0.0,
+      "cachedTokenRatio": 0.0,
+      "totalCostUsd": 3.9142,
+      "totalLatencyMs": 43101,
+      "avgLatencyMs": 86.2,
+      "turns": 500,
+      "chunkCount": 1411,
+      "qualityScore": 0.4345,
+      "qualityScorePct": 43.4,
+      "tokensPerTurn": 5876.1,
+      "costPerTurnUsd": 0.007828,
+      "inputTokensPerTurn": 5397.7,
+      "outputTokensPerTurn": 478.4,
+      "stages": [
+        {
+          "stage": "GENERATE",
+          "calls": 500,
+          "inputTokens": 1731841,
+          "outputTokens": 106658,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 2.590168,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "EMBED",
+          "calls": 89,
+          "inputTokens": 383949,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.007679,
+          "totalLatencyMs": 89
+        },
+        {
+          "stage": "JUDGE",
+          "calls": 426,
+          "inputTokens": 186422,
+          "outputTokens": 58448,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.504257,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "INTENT",
+          "calls": 500,
+          "inputTokens": 206192,
+          "outputTokens": 28067,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.382152,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "REWRITE",
+          "calls": 426,
+          "inputTokens": 173877,
+          "outputTokens": 46040,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.429644,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "RETRIEVE_VECTOR",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 8520
+        },
+        {
+          "stage": "RETRIEVE_KEYWORD",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 8520
+        },
+        {
+          "stage": "PARSE",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 200
+        },
+        {
+          "stage": "CHUNK",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 200
+        },
+        {
+          "stage": "FUSION",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 11860
+        },
+        {
+          "stage": "RERANK",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 11860
+        }
+      ],
+      "tokensByModel": {
+        "local": 0,
+        "text-embedding-v4": 400495,
+        "qwen3.8": 2537545,
+        "qwen3-rerank": 0
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "cumulativeTokens": 0,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 20,
+          "cumulativeTokens": 12500,
+          "stage": "EMBED",
+          "tokens": 3925
+        },
+        {
+          "t": 40,
+          "cumulativeTokens": 24467,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 60,
+          "cumulativeTokens": 36921,
+          "stage": "EMBED",
+          "tokens": 3602
+        },
+        {
+          "t": 80,
+          "cumulativeTokens": 45603,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 100,
+          "cumulativeTokens": 62593,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 120,
+          "cumulativeTokens": 81088,
+          "stage": "EMBED",
+          "tokens": 4846
+        },
+        {
+          "t": 140,
+          "cumulativeTokens": 99692,
+          "stage": "EMBED",
+          "tokens": 4549
+        },
+        {
+          "t": 160,
+          "cumulativeTokens": 118229,
+          "stage": "EMBED",
+          "tokens": 4671
+        },
+        {
+          "t": 180,
+          "cumulativeTokens": 131940,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 200,
+          "cumulativeTokens": 150620,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 220,
+          "cumulativeTokens": 168172,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 240,
+          "cumulativeTokens": 181709,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 260,
+          "cumulativeTokens": 199161,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 280,
+          "cumulativeTokens": 216877,
+          "stage": "EMBED",
+          "tokens": 4458
+        },
+        {
+          "t": 300,
+          "cumulativeTokens": 229117,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 320,
+          "cumulativeTokens": 244407,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 340,
+          "cumulativeTokens": 259675,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 360,
+          "cumulativeTokens": 275097,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 380,
+          "cumulativeTokens": 290485,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 400,
+          "cumulativeTokens": 307031,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 420,
+          "cumulativeTokens": 321489,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 440,
+          "cumulativeTokens": 340297,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 460,
+          "cumulativeTokens": 359388,
+          "stage": "EMBED",
+          "tokens": 4520
+        },
+        {
+          "t": 480,
+          "cumulativeTokens": 373609,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 500,
+          "cumulativeTokens": 390150,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 520,
+          "cumulativeTokens": 402769,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 540,
+          "cumulativeTokens": 418985,
+          "stage": "JUDGE",
+          "tokens": 514
+        },
+        {
+          "t": 560,
+          "cumulativeTokens": 431665,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 9
+        },
+        {
+          "t": 580,
+          "cumulativeTokens": 448678,
+          "stage": "JUDGE",
+          "tokens": 561
+        },
+        {
+          "t": 600,
+          "cumulativeTokens": 461446,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 620,
+          "cumulativeTokens": 477268,
+          "stage": "JUDGE",
+          "tokens": 555
+        },
+        {
+          "t": 640,
+          "cumulativeTokens": 489904,
+          "stage": "GENERATE",
+          "tokens": 546
+        },
+        {
+          "t": 660,
+          "cumulativeTokens": 502736,
+          "stage": "JUDGE",
+          "tokens": 512
+        },
+        {
+          "t": 680,
+          "cumulativeTokens": 515711,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 10
+        },
+        {
+          "t": 700,
+          "cumulativeTokens": 532586,
+          "stage": "JUDGE",
+          "tokens": 599
+        },
+        {
+          "t": 720,
+          "cumulativeTokens": 545178,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 740,
+          "cumulativeTokens": 562247,
+          "stage": "JUDGE",
+          "tokens": 603
+        },
+        {
+          "t": 760,
+          "cumulativeTokens": 573750,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 780,
+          "cumulativeTokens": 588624,
+          "stage": "JUDGE",
+          "tokens": 557
+        },
+        {
+          "t": 800,
+          "cumulativeTokens": 601093,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 820,
+          "cumulativeTokens": 617990,
+          "stage": "JUDGE",
+          "tokens": 640
+        },
+        {
+          "t": 840,
+          "cumulativeTokens": 631422,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 10
+        },
+        {
+          "t": 860,
+          "cumulativeTokens": 647862,
+          "stage": "JUDGE",
+          "tokens": 578
+        },
+        {
+          "t": 880,
+          "cumulativeTokens": 660458,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 900,
+          "cumulativeTokens": 675183,
+          "stage": "JUDGE",
+          "tokens": 484
+        },
+        {
+          "t": 920,
+          "cumulativeTokens": 687326,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 940,
+          "cumulativeTokens": 703698,
+          "stage": "JUDGE",
+          "tokens": 587
+        },
+        {
+          "t": 960,
+          "cumulativeTokens": 717196,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 980,
+          "cumulativeTokens": 734226,
+          "stage": "JUDGE",
+          "tokens": 553
+        },
+        {
+          "t": 1000,
+          "cumulativeTokens": 747523,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 1020,
+          "cumulativeTokens": 762511,
+          "stage": "JUDGE",
+          "tokens": 489
+        },
+        {
+          "t": 1040,
+          "cumulativeTokens": 774220,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 1060,
+          "cumulativeTokens": 791004,
+          "stage": "JUDGE",
+          "tokens": 589
+        },
+        {
+          "t": 1080,
+          "cumulativeTokens": 804037,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 9
+        },
+        {
+          "t": 1100,
+          "cumulativeTokens": 819527,
+          "stage": "GENERATE",
+          "tokens": 554
+        },
+        {
+          "t": 1120,
+          "cumulativeTokens": 833238,
+          "stage": "GENERATE",
+          "tokens": 558
+        },
+        {
+          "t": 1140,
+          "cumulativeTokens": 847667,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 1160,
+          "cumulativeTokens": 859268,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 1180,
+          "cumulativeTokens": 877016,
+          "stage": "JUDGE",
+          "tokens": 613
+        },
+        {
+          "t": 1200,
+          "cumulativeTokens": 889857,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 1220,
+          "cumulativeTokens": 906150,
+          "stage": "JUDGE",
+          "tokens": 577
+        },
+        {
+          "t": 1240,
+          "cumulativeTokens": 919743,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 14
+        },
+        {
+          "t": 1260,
+          "cumulativeTokens": 935843,
+          "stage": "JUDGE",
+          "tokens": 648
+        },
+        {
+          "t": 1280,
+          "cumulativeTokens": 949468,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 1300,
+          "cumulativeTokens": 965963,
+          "stage": "JUDGE",
+          "tokens": 518
+        },
+        {
+          "t": 1320,
+          "cumulativeTokens": 978768,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 1340,
+          "cumulativeTokens": 993192,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 1360,
+          "cumulativeTokens": 1009266,
+          "stage": "JUDGE",
+          "tokens": 647
+        },
+        {
+          "t": 1380,
+          "cumulativeTokens": 1022942,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 28
+        },
+        {
+          "t": 1400,
+          "cumulativeTokens": 1039885,
+          "stage": "JUDGE",
+          "tokens": 563
+        },
+        {
+          "t": 1420,
+          "cumulativeTokens": 1053649,
+          "stage": "JUDGE",
+          "tokens": 575
+        },
+        {
+          "t": 1440,
+          "cumulativeTokens": 1067053,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 1460,
+          "cumulativeTokens": 1083102,
+          "stage": "JUDGE",
+          "tokens": 647
+        },
+        {
+          "t": 1480,
+          "cumulativeTokens": 1096702,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 1500,
+          "cumulativeTokens": 1112900,
+          "stage": "JUDGE",
+          "tokens": 540
+        },
+        {
+          "t": 1520,
+          "cumulativeTokens": 1125795,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 1540,
+          "cumulativeTokens": 1142384,
+          "stage": "JUDGE",
+          "tokens": 533
+        },
+        {
+          "t": 1560,
+          "cumulativeTokens": 1155174,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 1580,
+          "cumulativeTokens": 1173024,
+          "stage": "JUDGE",
+          "tokens": 630
+        },
+        {
+          "t": 1600,
+          "cumulativeTokens": 1185618,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 1620,
+          "cumulativeTokens": 1202752,
+          "stage": "JUDGE",
+          "tokens": 618
+        },
+        {
+          "t": 1640,
+          "cumulativeTokens": 1215333,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 1660,
+          "cumulativeTokens": 1232332,
+          "stage": "JUDGE",
+          "tokens": 615
+        },
+        {
+          "t": 1680,
+          "cumulativeTokens": 1246867,
+          "stage": "JUDGE",
+          "tokens": 628
+        },
+        {
+          "t": 1700,
+          "cumulativeTokens": 1260526,
+          "stage": "JUDGE",
+          "tokens": 565
+        },
+        {
+          "t": 1720,
+          "cumulativeTokens": 1273226,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 1740,
+          "cumulativeTokens": 1290040,
+          "stage": "JUDGE",
+          "tokens": 534
+        },
+        {
+          "t": 1760,
+          "cumulativeTokens": 1303710,
+          "stage": "JUDGE",
+          "tokens": 642
+        },
+        {
+          "t": 1780,
+          "cumulativeTokens": 1317357,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 1800,
+          "cumulativeTokens": 1333545,
+          "stage": "JUDGE",
+          "tokens": 606
+        },
+        {
+          "t": 1820,
+          "cumulativeTokens": 1346379,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 14
+        },
+        {
+          "t": 1840,
+          "cumulativeTokens": 1362461,
+          "stage": "JUDGE",
+          "tokens": 528
+        },
+        {
+          "t": 1860,
+          "cumulativeTokens": 1376222,
+          "stage": "JUDGE",
+          "tokens": 600
+        },
+        {
+          "t": 1880,
+          "cumulativeTokens": 1388773,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 1900,
+          "cumulativeTokens": 1404935,
+          "stage": "JUDGE",
+          "tokens": 625
+        },
+        {
+          "t": 1920,
+          "cumulativeTokens": 1417921,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 1940,
+          "cumulativeTokens": 1435192,
+          "stage": "JUDGE",
+          "tokens": 609
+        },
+        {
+          "t": 1960,
+          "cumulativeTokens": 1447956,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 1980,
+          "cumulativeTokens": 1464427,
+          "stage": "JUDGE",
+          "tokens": 529
+        },
+        {
+          "t": 2000,
+          "cumulativeTokens": 1477496,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 2020,
+          "cumulativeTokens": 1494071,
+          "stage": "JUDGE",
+          "tokens": 551
+        },
+        {
+          "t": 2040,
+          "cumulativeTokens": 1507184,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2060,
+          "cumulativeTokens": 1524431,
+          "stage": "JUDGE",
+          "tokens": 551
+        },
+        {
+          "t": 2080,
+          "cumulativeTokens": 1537305,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 2100,
+          "cumulativeTokens": 1553389,
+          "stage": "JUDGE",
+          "tokens": 517
+        },
+        {
+          "t": 2120,
+          "cumulativeTokens": 1566149,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 24
+        },
+        {
+          "t": 2140,
+          "cumulativeTokens": 1582627,
+          "stage": "JUDGE",
+          "tokens": 572
+        },
+        {
+          "t": 2160,
+          "cumulativeTokens": 1595111,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 2180,
+          "cumulativeTokens": 1612398,
+          "stage": "JUDGE",
+          "tokens": 598
+        },
+        {
+          "t": 2200,
+          "cumulativeTokens": 1625642,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 2220,
+          "cumulativeTokens": 1639286,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 2240,
+          "cumulativeTokens": 1655539,
+          "stage": "JUDGE",
+          "tokens": 528
+        },
+        {
+          "t": 2260,
+          "cumulativeTokens": 1668551,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 2280,
+          "cumulativeTokens": 1685401,
+          "stage": "JUDGE",
+          "tokens": 553
+        },
+        {
+          "t": 2300,
+          "cumulativeTokens": 1698461,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2320,
+          "cumulativeTokens": 1715756,
+          "stage": "JUDGE",
+          "tokens": 563
+        },
+        {
+          "t": 2340,
+          "cumulativeTokens": 1729905,
+          "stage": "JUDGE",
+          "tokens": 626
+        },
+        {
+          "t": 2360,
+          "cumulativeTokens": 1743181,
+          "stage": "JUDGE",
+          "tokens": 568
+        },
+        {
+          "t": 2380,
+          "cumulativeTokens": 1755770,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 14
+        },
+        {
+          "t": 2400,
+          "cumulativeTokens": 1771036,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 2420,
+          "cumulativeTokens": 1784147,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 2440,
+          "cumulativeTokens": 1800755,
+          "stage": "JUDGE",
+          "tokens": 602
+        },
+        {
+          "t": 2460,
+          "cumulativeTokens": 1814065,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 28
+        },
+        {
+          "t": 2480,
+          "cumulativeTokens": 1831135,
+          "stage": "JUDGE",
+          "tokens": 596
+        },
+        {
+          "t": 2500,
+          "cumulativeTokens": 1841519,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 13
+        },
+        {
+          "t": 2520,
+          "cumulativeTokens": 1853249,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 2540,
+          "cumulativeTokens": 1867783,
+          "stage": "JUDGE",
+          "tokens": 574
+        },
+        {
+          "t": 2560,
+          "cumulativeTokens": 1879592,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 2580,
+          "cumulativeTokens": 1893336,
+          "stage": "JUDGE",
+          "tokens": 482
+        },
+        {
+          "t": 2600,
+          "cumulativeTokens": 1906827,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 2620,
+          "cumulativeTokens": 1921481,
+          "stage": "JUDGE",
+          "tokens": 540
+        },
+        {
+          "t": 2640,
+          "cumulativeTokens": 1932448,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2660,
+          "cumulativeTokens": 1946982,
+          "stage": "JUDGE",
+          "tokens": 541
+        },
+        {
+          "t": 2680,
+          "cumulativeTokens": 1960476,
+          "stage": "GENERATE",
+          "tokens": 543
+        },
+        {
+          "t": 2700,
+          "cumulativeTokens": 1972057,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 2720,
+          "cumulativeTokens": 1987764,
+          "stage": "JUDGE",
+          "tokens": 608
+        },
+        {
+          "t": 2740,
+          "cumulativeTokens": 2000727,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 2760,
+          "cumulativeTokens": 2014715,
+          "stage": "JUDGE",
+          "tokens": 527
+        },
+        {
+          "t": 2780,
+          "cumulativeTokens": 2026223,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 2800,
+          "cumulativeTokens": 2041530,
+          "stage": "JUDGE",
+          "tokens": 585
+        },
+        {
+          "t": 2820,
+          "cumulativeTokens": 2054363,
+          "stage": "JUDGE",
+          "tokens": 511
+        },
+        {
+          "t": 2840,
+          "cumulativeTokens": 2065595,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 2860,
+          "cumulativeTokens": 2082553,
+          "stage": "JUDGE",
+          "tokens": 667
+        },
+        {
+          "t": 2880,
+          "cumulativeTokens": 2094656,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 2900,
+          "cumulativeTokens": 2107237,
+          "stage": "GENERATE",
+          "tokens": 551
+        },
+        {
+          "t": 2920,
+          "cumulativeTokens": 2118718,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 2940,
+          "cumulativeTokens": 2133596,
+          "stage": "JUDGE",
+          "tokens": 579
+        },
+        {
+          "t": 2960,
+          "cumulativeTokens": 2144984,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2980,
+          "cumulativeTokens": 2159777,
+          "stage": "JUDGE",
+          "tokens": 622
+        },
+        {
+          "t": 3000,
+          "cumulativeTokens": 2174407,
+          "stage": "JUDGE",
+          "tokens": 671
+        },
+        {
+          "t": 3020,
+          "cumulativeTokens": 2186517,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 3040,
+          "cumulativeTokens": 2199905,
+          "stage": "JUDGE",
+          "tokens": 477
+        },
+        {
+          "t": 3060,
+          "cumulativeTokens": 2211657,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 3080,
+          "cumulativeTokens": 2227141,
+          "stage": "JUDGE",
+          "tokens": 550
+        },
+        {
+          "t": 3100,
+          "cumulativeTokens": 2239658,
+          "stage": "GENERATE",
+          "tokens": 555
+        },
+        {
+          "t": 3120,
+          "cumulativeTokens": 2251179,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 3140,
+          "cumulativeTokens": 2265772,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 3160,
+          "cumulativeTokens": 2281946,
+          "stage": "JUDGE",
+          "tokens": 566
+        },
+        {
+          "t": 3180,
+          "cumulativeTokens": 2294911,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 3200,
+          "cumulativeTokens": 2311940,
+          "stage": "JUDGE",
+          "tokens": 650
+        },
+        {
+          "t": 3220,
+          "cumulativeTokens": 2325930,
+          "stage": "GENERATE",
+          "tokens": 551
+        },
+        {
+          "t": 3240,
+          "cumulativeTokens": 2340825,
+          "stage": "JUDGE",
+          "tokens": 652
+        },
+        {
+          "t": 3260,
+          "cumulativeTokens": 2355192,
+          "stage": "GENERATE",
+          "tokens": 547
+        },
+        {
+          "t": 3280,
+          "cumulativeTokens": 2368375,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 3300,
+          "cumulativeTokens": 2385085,
+          "stage": "JUDGE",
+          "tokens": 623
+        },
+        {
+          "t": 3320,
+          "cumulativeTokens": 2399302,
+          "stage": "JUDGE",
+          "tokens": 593
+        },
+        {
+          "t": 3340,
+          "cumulativeTokens": 2413902,
+          "stage": "JUDGE",
+          "tokens": 650
+        },
+        {
+          "t": 3360,
+          "cumulativeTokens": 2427822,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 3380,
+          "cumulativeTokens": 2444884,
+          "stage": "JUDGE",
+          "tokens": 644
+        },
+        {
+          "t": 3400,
+          "cumulativeTokens": 2458708,
+          "stage": "GENERATE",
+          "tokens": 549
+        },
+        {
+          "t": 3420,
+          "cumulativeTokens": 2471874,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 3440,
+          "cumulativeTokens": 2489437,
+          "stage": "JUDGE",
+          "tokens": 653
+        },
+        {
+          "t": 3460,
+          "cumulativeTokens": 2503257,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 3480,
+          "cumulativeTokens": 2520332,
+          "stage": "JUDGE",
+          "tokens": 644
+        },
+        {
+          "t": 3500,
+          "cumulativeTokens": 2532973,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 14
+        },
+        {
+          "t": 3520,
+          "cumulativeTokens": 2550081,
+          "stage": "JUDGE",
+          "tokens": 592
+        },
+        {
+          "t": 3540,
+          "cumulativeTokens": 2563695,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3560,
+          "cumulativeTokens": 2581185,
+          "stage": "JUDGE",
+          "tokens": 615
+        },
+        {
+          "t": 3580,
+          "cumulativeTokens": 2595286,
+          "stage": "JUDGE",
+          "tokens": 647
+        },
+        {
+          "t": 3600,
+          "cumulativeTokens": 2608130,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 13
+        },
+        {
+          "t": 3620,
+          "cumulativeTokens": 2625249,
+          "stage": "JUDGE",
+          "tokens": 591
+        },
+        {
+          "t": 3640,
+          "cumulativeTokens": 2639054,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3660,
+          "cumulativeTokens": 2656569,
+          "stage": "JUDGE",
+          "tokens": 621
+        },
+        {
+          "t": 3680,
+          "cumulativeTokens": 2669587,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 3700,
+          "cumulativeTokens": 2683530,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 13
+        },
+        {
+          "t": 3720,
+          "cumulativeTokens": 2700812,
+          "stage": "JUDGE",
+          "tokens": 600
+        },
+        {
+          "t": 3740,
+          "cumulativeTokens": 2714595,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3760,
+          "cumulativeTokens": 2732356,
+          "stage": "JUDGE",
+          "tokens": 588
+        },
+        {
+          "t": 3780,
+          "cumulativeTokens": 2746505,
+          "stage": "JUDGE",
+          "tokens": 644
+        },
+        {
+          "t": 3800,
+          "cumulativeTokens": 2760303,
+          "stage": "GENERATE",
+          "tokens": 548
+        },
+        {
+          "t": 3820,
+          "cumulativeTokens": 2773338,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 3840,
+          "cumulativeTokens": 2789928,
+          "stage": "JUDGE",
+          "tokens": 520
+        },
+        {
+          "t": 3860,
+          "cumulativeTokens": 2803173,
+          "stage": "JUDGE",
+          "tokens": 516
+        },
+        {
+          "t": 3880,
+          "cumulativeTokens": 2815803,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 3900,
+          "cumulativeTokens": 2832416,
+          "stage": "JUDGE",
+          "tokens": 552
+        },
+        {
+          "t": 3920,
+          "cumulativeTokens": 2845909,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 3940,
+          "cumulativeTokens": 2862866,
+          "stage": "JUDGE",
+          "tokens": 557
+        },
+        {
+          "t": 3960,
+          "cumulativeTokens": 2874785,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3980,
+          "cumulativeTokens": 2890457,
+          "stage": "JUDGE",
+          "tokens": 599
+        },
+        {
+          "t": 4000,
+          "cumulativeTokens": 2902584,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 4020,
+          "cumulativeTokens": 2919739,
+          "stage": "JUDGE",
+          "tokens": 538
+        },
+        {
+          "t": 4040,
+          "cumulativeTokens": 2932723,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 4044,
+          "cumulativeTokens": 2938040,
+          "stage": "JUDGE",
+          "tokens": 630
+        }
+      ]
+    },
+    {
+      "experimentId": "D_ROUTED",
+      "displayName": "只改路由：固定分块 + 仅向量 + 按意图路由",
+      "chunkStrategy": "FIXED_SIZE",
+      "retrievalStrategy": "VECTOR_ONLY",
+      "routingStrategy": "INTENT_ROUTED",
+      "cacheStrategy": "DISABLED",
+      "inputTokens": 2679369,
+      "outputTokens": 239463,
+      "totalTokens": 2918832,
+      "cachedInputTokens": 0,
+      "cacheHitRate": 0.0,
+      "cachedTokenRatio": 0.0,
+      "totalCostUsd": 2.5445,
+      "totalLatencyMs": 27901,
+      "avgLatencyMs": 55.8,
+      "turns": 500,
+      "chunkCount": 1411,
+      "qualityScore": 0.4188,
+      "qualityScorePct": 41.9,
+      "tokensPerTurn": 5837.7,
+      "costPerTurnUsd": 0.005089,
+      "inputTokensPerTurn": 5358.7,
+      "outputTokensPerTurn": 478.9,
+      "stages": [
+        {
+          "stage": "GENERATE",
+          "calls": 500,
+          "inputTokens": 1720410,
+          "outputTokens": 106897,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 2.455337,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "EMBED",
+          "calls": 89,
+          "inputTokens": 383949,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.007679,
+          "totalLatencyMs": 89
+        },
+        {
+          "stage": "JUDGE",
+          "calls": 426,
+          "inputTokens": 186659,
+          "outputTokens": 58459,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.032717,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "INTENT",
+          "calls": 500,
+          "inputTokens": 206192,
+          "outputTokens": 28067,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.021536,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "REWRITE",
+          "calls": 426,
+          "inputTokens": 173886,
+          "outputTokens": 46040,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.02711,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "RETRIEVE_VECTOR",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 8520
+        },
+        {
+          "stage": "PARSE",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 200
+        },
+        {
+          "stage": "CHUNK",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 200
+        },
+        {
+          "stage": "FUSION",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 8520
+        },
+        {
+          "stage": "RERANK",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 8520
+        }
+      ],
+      "tokensByModel": {
+        "local": 0,
+        "text-embedding-v4": 392222,
+        "qwen-flash": 739848,
+        "qwen3-rerank": 0,
+        "qwen3.8": 1786762
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "cumulativeTokens": 0,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 18,
+          "cumulativeTokens": 8575,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 36,
+          "cumulativeTokens": 20648,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 54,
+          "cumulativeTokens": 33319,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 72,
+          "cumulativeTokens": 41469,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 90,
+          "cumulativeTokens": 53631,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 108,
+          "cumulativeTokens": 67003,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 126,
+          "cumulativeTokens": 85768,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 144,
+          "cumulativeTokens": 99692,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 162,
+          "cumulativeTokens": 118229,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 180,
+          "cumulativeTokens": 131940,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 198,
+          "cumulativeTokens": 150620,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 216,
+          "cumulativeTokens": 163990,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 234,
+          "cumulativeTokens": 177185,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 252,
+          "cumulativeTokens": 190104,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 270,
+          "cumulativeTokens": 208058,
+          "stage": "EMBED",
+          "tokens": 4731
+        },
+        {
+          "t": 288,
+          "cumulativeTokens": 221313,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 306,
+          "cumulativeTokens": 232888,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 324,
+          "cumulativeTokens": 248134,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 342,
+          "cumulativeTokens": 263504,
+          "stage": "EMBED",
+          "tokens": 3829
+        },
+        {
+          "t": 360,
+          "cumulativeTokens": 275097,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 378,
+          "cumulativeTokens": 290485,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 396,
+          "cumulativeTokens": 302546,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 414,
+          "cumulativeTokens": 321489,
+          "stage": "EMBED",
+          "tokens": 4710
+        },
+        {
+          "t": 432,
+          "cumulativeTokens": 335877,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 450,
+          "cumulativeTokens": 350164,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 468,
+          "cumulativeTokens": 364304,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 486,
+          "cumulativeTokens": 378522,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 504,
+          "cumulativeTokens": 395310,
+          "stage": "GENERATE",
+          "tokens": 543
+        },
+        {
+          "t": 522,
+          "cumulativeTokens": 408056,
+          "stage": "REWRITE",
+          "tokens": 468
+        },
+        {
+          "t": 540,
+          "cumulativeTokens": 423479,
+          "stage": "GENERATE",
+          "tokens": 4117
+        },
+        {
+          "t": 558,
+          "cumulativeTokens": 437028,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 14
+        },
+        {
+          "t": 576,
+          "cumulativeTokens": 453369,
+          "stage": "JUDGE",
+          "tokens": 559
+        },
+        {
+          "t": 594,
+          "cumulativeTokens": 466627,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 612,
+          "cumulativeTokens": 481904,
+          "stage": "INTENT",
+          "tokens": 468
+        },
+        {
+          "t": 630,
+          "cumulativeTokens": 492138,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 648,
+          "cumulativeTokens": 508184,
+          "stage": "INTENT",
+          "tokens": 459
+        },
+        {
+          "t": 666,
+          "cumulativeTokens": 520469,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 684,
+          "cumulativeTokens": 538040,
+          "stage": "REWRITE",
+          "tokens": 456
+        },
+        {
+          "t": 702,
+          "cumulativeTokens": 553910,
+          "stage": "GENERATE",
+          "tokens": 4553
+        },
+        {
+          "t": 720,
+          "cumulativeTokens": 566923,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 738,
+          "cumulativeTokens": 581932,
+          "stage": "JUDGE",
+          "tokens": 501
+        },
+        {
+          "t": 756,
+          "cumulativeTokens": 593743,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 774,
+          "cumulativeTokens": 610224,
+          "stage": "INTENT",
+          "tokens": 471
+        },
+        {
+          "t": 792,
+          "cumulativeTokens": 622140,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 810,
+          "cumulativeTokens": 639713,
+          "stage": "REWRITE",
+          "tokens": 462
+        },
+        {
+          "t": 828,
+          "cumulativeTokens": 655822,
+          "stage": "GENERATE",
+          "tokens": 3777
+        },
+        {
+          "t": 846,
+          "cumulativeTokens": 667876,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 18
+        },
+        {
+          "t": 864,
+          "cumulativeTokens": 683259,
+          "stage": "JUDGE",
+          "tokens": 543
+        },
+        {
+          "t": 882,
+          "cumulativeTokens": 695721,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 900,
+          "cumulativeTokens": 712973,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 918,
+          "cumulativeTokens": 725602,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 936,
+          "cumulativeTokens": 743613,
+          "stage": "REWRITE",
+          "tokens": 469
+        },
+        {
+          "t": 954,
+          "cumulativeTokens": 758089,
+          "stage": "GENERATE",
+          "tokens": 3741
+        },
+        {
+          "t": 972,
+          "cumulativeTokens": 770235,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 21
+        },
+        {
+          "t": 990,
+          "cumulativeTokens": 785826,
+          "stage": "JUDGE",
+          "tokens": 589
+        },
+        {
+          "t": 1008,
+          "cumulativeTokens": 798679,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1026,
+          "cumulativeTokens": 813458,
+          "stage": "GENERATE",
+          "tokens": 554
+        },
+        {
+          "t": 1044,
+          "cumulativeTokens": 827076,
+          "stage": "GENERATE",
+          "tokens": 558
+        },
+        {
+          "t": 1062,
+          "cumulativeTokens": 841466,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 1080,
+          "cumulativeTokens": 853018,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1098,
+          "cumulativeTokens": 871197,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 1116,
+          "cumulativeTokens": 883518,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1134,
+          "cumulativeTokens": 901007,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 1152,
+          "cumulativeTokens": 917475,
+          "stage": "GENERATE",
+          "tokens": 3870
+        },
+        {
+          "t": 1170,
+          "cumulativeTokens": 930752,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 29
+        },
+        {
+          "t": 1188,
+          "cumulativeTokens": 948512,
+          "stage": "JUDGE",
+          "tokens": 628
+        },
+        {
+          "t": 1206,
+          "cumulativeTokens": 961006,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1224,
+          "cumulativeTokens": 978488,
+          "stage": "INTENT",
+          "tokens": 467
+        },
+        {
+          "t": 1242,
+          "cumulativeTokens": 991946,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 1260,
+          "cumulativeTokens": 1004173,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1278,
+          "cumulativeTokens": 1022937,
+          "stage": "REWRITE",
+          "tokens": 471
+        },
+        {
+          "t": 1296,
+          "cumulativeTokens": 1035043,
+          "stage": "REWRITE",
+          "tokens": 475
+        },
+        {
+          "t": 1314,
+          "cumulativeTokens": 1051445,
+          "stage": "GENERATE",
+          "tokens": 4675
+        },
+        {
+          "t": 1332,
+          "cumulativeTokens": 1064456,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 28
+        },
+        {
+          "t": 1350,
+          "cumulativeTokens": 1081179,
+          "stage": "JUDGE",
+          "tokens": 596
+        },
+        {
+          "t": 1368,
+          "cumulativeTokens": 1094784,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1386,
+          "cumulativeTokens": 1111182,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 1404,
+          "cumulativeTokens": 1123989,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1422,
+          "cumulativeTokens": 1140581,
+          "stage": "REWRITE",
+          "tokens": 477
+        },
+        {
+          "t": 1440,
+          "cumulativeTokens": 1157748,
+          "stage": "GENERATE",
+          "tokens": 4659
+        },
+        {
+          "t": 1458,
+          "cumulativeTokens": 1171249,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 22
+        },
+        {
+          "t": 1476,
+          "cumulativeTokens": 1186404,
+          "stage": "JUDGE",
+          "tokens": 575
+        },
+        {
+          "t": 1494,
+          "cumulativeTokens": 1199594,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1512,
+          "cumulativeTokens": 1216206,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 1530,
+          "cumulativeTokens": 1230679,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 1548,
+          "cumulativeTokens": 1244505,
+          "stage": "INTENT",
+          "tokens": 467
+        },
+        {
+          "t": 1566,
+          "cumulativeTokens": 1255533,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1584,
+          "cumulativeTokens": 1273210,
+          "stage": "REWRITE",
+          "tokens": 475
+        },
+        {
+          "t": 1602,
+          "cumulativeTokens": 1286045,
+          "stage": "REWRITE",
+          "tokens": 473
+        },
+        {
+          "t": 1620,
+          "cumulativeTokens": 1303167,
+          "stage": "GENERATE",
+          "tokens": 4655
+        },
+        {
+          "t": 1638,
+          "cumulativeTokens": 1316572,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 17
+        },
+        {
+          "t": 1656,
+          "cumulativeTokens": 1333104,
+          "stage": "JUDGE",
+          "tokens": 578
+        },
+        {
+          "t": 1674,
+          "cumulativeTokens": 1345285,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1692,
+          "cumulativeTokens": 1358828,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1710,
+          "cumulativeTokens": 1375803,
+          "stage": "INTENT",
+          "tokens": 460
+        },
+        {
+          "t": 1728,
+          "cumulativeTokens": 1387677,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1746,
+          "cumulativeTokens": 1405407,
+          "stage": "REWRITE",
+          "tokens": 468
+        },
+        {
+          "t": 1764,
+          "cumulativeTokens": 1421887,
+          "stage": "GENERATE",
+          "tokens": 4390
+        },
+        {
+          "t": 1782,
+          "cumulativeTokens": 1435189,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 26
+        },
+        {
+          "t": 1800,
+          "cumulativeTokens": 1451666,
+          "stage": "JUDGE",
+          "tokens": 529
+        },
+        {
+          "t": 1818,
+          "cumulativeTokens": 1464659,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1836,
+          "cumulativeTokens": 1481695,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 1854,
+          "cumulativeTokens": 1494261,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1872,
+          "cumulativeTokens": 1512288,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 1890,
+          "cumulativeTokens": 1528156,
+          "stage": "GENERATE",
+          "tokens": 4073
+        },
+        {
+          "t": 1908,
+          "cumulativeTokens": 1541183,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 27
+        },
+        {
+          "t": 1926,
+          "cumulativeTokens": 1557699,
+          "stage": "JUDGE",
+          "tokens": 561
+        },
+        {
+          "t": 1944,
+          "cumulativeTokens": 1570162,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 1962,
+          "cumulativeTokens": 1587088,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 1980,
+          "cumulativeTokens": 1599859,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 1998,
+          "cumulativeTokens": 1617904,
+          "stage": "GENERATE",
+          "tokens": 548
+        },
+        {
+          "t": 2016,
+          "cumulativeTokens": 1631108,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 2034,
+          "cumulativeTokens": 1647156,
+          "stage": "GENERATE",
+          "tokens": 4468
+        },
+        {
+          "t": 2052,
+          "cumulativeTokens": 1660625,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 23
+        },
+        {
+          "t": 2070,
+          "cumulativeTokens": 1677280,
+          "stage": "JUDGE",
+          "tokens": 629
+        },
+        {
+          "t": 2088,
+          "cumulativeTokens": 1690306,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2106,
+          "cumulativeTokens": 1704516,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2124,
+          "cumulativeTokens": 1718594,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2142,
+          "cumulativeTokens": 1735164,
+          "stage": "INTENT",
+          "tokens": 471
+        },
+        {
+          "t": 2160,
+          "cumulativeTokens": 1747425,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2178,
+          "cumulativeTokens": 1762891,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 2196,
+          "cumulativeTokens": 1775301,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2214,
+          "cumulativeTokens": 1793170,
+          "stage": "REWRITE",
+          "tokens": 472
+        },
+        {
+          "t": 2232,
+          "cumulativeTokens": 1809670,
+          "stage": "GENERATE",
+          "tokens": 4380
+        },
+        {
+          "t": 2250,
+          "cumulativeTokens": 1821793,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 11
+        },
+        {
+          "t": 2268,
+          "cumulativeTokens": 1835388,
+          "stage": "JUDGE",
+          "tokens": 481
+        },
+        {
+          "t": 2286,
+          "cumulativeTokens": 1847518,
+          "stage": "JUDGE",
+          "tokens": 540
+        },
+        {
+          "t": 2304,
+          "cumulativeTokens": 1859327,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2322,
+          "cumulativeTokens": 1873905,
+          "stage": "INTENT",
+          "tokens": 464
+        },
+        {
+          "t": 2340,
+          "cumulativeTokens": 1885806,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2358,
+          "cumulativeTokens": 1903033,
+          "stage": "REWRITE",
+          "tokens": 446
+        },
+        {
+          "t": 2376,
+          "cumulativeTokens": 1916004,
+          "stage": "GENERATE",
+          "tokens": 3457
+        },
+        {
+          "t": 2394,
+          "cumulativeTokens": 1928096,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 18
+        },
+        {
+          "t": 2412,
+          "cumulativeTokens": 1943600,
+          "stage": "JUDGE",
+          "tokens": 521
+        },
+        {
+          "t": 2430,
+          "cumulativeTokens": 1956183,
+          "stage": "JUDGE",
+          "tokens": 520
+        },
+        {
+          "t": 2448,
+          "cumulativeTokens": 1967707,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2466,
+          "cumulativeTokens": 1985232,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 2484,
+          "cumulativeTokens": 1995924,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2502,
+          "cumulativeTokens": 2011191,
+          "stage": "REWRITE",
+          "tokens": 463
+        },
+        {
+          "t": 2520,
+          "cumulativeTokens": 2025595,
+          "stage": "GENERATE",
+          "tokens": 3964
+        },
+        {
+          "t": 2538,
+          "cumulativeTokens": 2038447,
+          "stage": "GENERATE",
+          "tokens": 3613
+        },
+        {
+          "t": 2556,
+          "cumulativeTokens": 2050231,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 2574,
+          "cumulativeTokens": 2067108,
+          "stage": "JUDGE",
+          "tokens": 667
+        },
+        {
+          "t": 2592,
+          "cumulativeTokens": 2079153,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2610,
+          "cumulativeTokens": 2091714,
+          "stage": "GENERATE",
+          "tokens": 551
+        },
+        {
+          "t": 2628,
+          "cumulativeTokens": 2103202,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2646,
+          "cumulativeTokens": 2118471,
+          "stage": "INTENT",
+          "tokens": 466
+        },
+        {
+          "t": 2664,
+          "cumulativeTokens": 2129298,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2682,
+          "cumulativeTokens": 2145012,
+          "stage": "GENERATE",
+          "tokens": 546
+        },
+        {
+          "t": 2700,
+          "cumulativeTokens": 2159533,
+          "stage": "REWRITE",
+          "tokens": 474
+        },
+        {
+          "t": 2718,
+          "cumulativeTokens": 2173670,
+          "stage": "GENERATE",
+          "tokens": 3032
+        },
+        {
+          "t": 2736,
+          "cumulativeTokens": 2185029,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 26
+        },
+        {
+          "t": 2754,
+          "cumulativeTokens": 2200022,
+          "stage": "JUDGE",
+          "tokens": 547
+        },
+        {
+          "t": 2772,
+          "cumulativeTokens": 2212398,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2790,
+          "cumulativeTokens": 2224810,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 2808,
+          "cumulativeTokens": 2241019,
+          "stage": "INTENT",
+          "tokens": 470
+        },
+        {
+          "t": 2826,
+          "cumulativeTokens": 2254797,
+          "stage": "INTENT",
+          "tokens": 469
+        },
+        {
+          "t": 2844,
+          "cumulativeTokens": 2266977,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 2862,
+          "cumulativeTokens": 2284695,
+          "stage": "REWRITE",
+          "tokens": 466
+        },
+        {
+          "t": 2880,
+          "cumulativeTokens": 2301009,
+          "stage": "GENERATE",
+          "tokens": 4305
+        },
+        {
+          "t": 2898,
+          "cumulativeTokens": 2312672,
+          "stage": "REWRITE",
+          "tokens": 479
+        },
+        {
+          "t": 2916,
+          "cumulativeTokens": 2330188,
+          "stage": "GENERATE",
+          "tokens": 4704
+        },
+        {
+          "t": 2934,
+          "cumulativeTokens": 2344331,
+          "stage": "GENERATE",
+          "tokens": 4451
+        },
+        {
+          "t": 2952,
+          "cumulativeTokens": 2358025,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 22
+        },
+        {
+          "t": 2970,
+          "cumulativeTokens": 2374890,
+          "stage": "JUDGE",
+          "tokens": 655
+        },
+        {
+          "t": 2988,
+          "cumulativeTokens": 2388926,
+          "stage": "JUDGE",
+          "tokens": 664
+        },
+        {
+          "t": 3006,
+          "cumulativeTokens": 2403707,
+          "stage": "JUDGE",
+          "tokens": 612
+        },
+        {
+          "t": 3024,
+          "cumulativeTokens": 2417053,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3042,
+          "cumulativeTokens": 2434472,
+          "stage": "INTENT",
+          "tokens": 467
+        },
+        {
+          "t": 3060,
+          "cumulativeTokens": 2448337,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 3078,
+          "cumulativeTokens": 2461029,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3096,
+          "cumulativeTokens": 2479787,
+          "stage": "REWRITE",
+          "tokens": 465
+        },
+        {
+          "t": 3114,
+          "cumulativeTokens": 2496678,
+          "stage": "GENERATE",
+          "tokens": 4472
+        },
+        {
+          "t": 3132,
+          "cumulativeTokens": 2510150,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 22
+        },
+        {
+          "t": 3150,
+          "cumulativeTokens": 2526967,
+          "stage": "JUDGE",
+          "tokens": 652
+        },
+        {
+          "t": 3168,
+          "cumulativeTokens": 2539861,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3186,
+          "cumulativeTokens": 2558438,
+          "stage": "INTENT",
+          "tokens": 468
+        },
+        {
+          "t": 3204,
+          "cumulativeTokens": 2572209,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 3222,
+          "cumulativeTokens": 2584841,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3240,
+          "cumulativeTokens": 2602717,
+          "stage": "REWRITE",
+          "tokens": 476
+        },
+        {
+          "t": 3258,
+          "cumulativeTokens": 2619603,
+          "stage": "GENERATE",
+          "tokens": 4743
+        },
+        {
+          "t": 3276,
+          "cumulativeTokens": 2633790,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 21
+        },
+        {
+          "t": 3294,
+          "cumulativeTokens": 2650802,
+          "stage": "JUDGE",
+          "tokens": 646
+        },
+        {
+          "t": 3312,
+          "cumulativeTokens": 2664717,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 3330,
+          "cumulativeTokens": 2677871,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3348,
+          "cumulativeTokens": 2695778,
+          "stage": "INTENT",
+          "tokens": 472
+        },
+        {
+          "t": 3366,
+          "cumulativeTokens": 2708787,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3384,
+          "cumulativeTokens": 2722843,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3402,
+          "cumulativeTokens": 2740648,
+          "stage": "GENERATE",
+          "tokens": 547
+        },
+        {
+          "t": 3420,
+          "cumulativeTokens": 2754603,
+          "stage": "REWRITE",
+          "tokens": 472
+        },
+        {
+          "t": 3438,
+          "cumulativeTokens": 2770648,
+          "stage": "GENERATE",
+          "tokens": 4129
+        },
+        {
+          "t": 3456,
+          "cumulativeTokens": 2783866,
+          "stage": "GENERATE",
+          "tokens": 4060
+        },
+        {
+          "t": 3474,
+          "cumulativeTokens": 2796964,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 18
+        },
+        {
+          "t": 3492,
+          "cumulativeTokens": 2813550,
+          "stage": "JUDGE",
+          "tokens": 552
+        },
+        {
+          "t": 3510,
+          "cumulativeTokens": 2826997,
+          "stage": "FUSION",
+          "tokens": 0
+        },
+        {
+          "t": 3528,
+          "cumulativeTokens": 2844355,
+          "stage": "INTENT",
+          "tokens": 468
+        },
+        {
+          "t": 3546,
+          "cumulativeTokens": 2855747,
+          "stage": "RERANK",
+          "tokens": 0
+        },
+        {
+          "t": 3564,
+          "cumulativeTokens": 2872315,
+          "stage": "REWRITE",
+          "tokens": 461
+        },
+        {
+          "t": 3582,
+          "cumulativeTokens": 2888109,
+          "stage": "GENERATE",
+          "tokens": 4647
+        },
+        {
+          "t": 3600,
+          "cumulativeTokens": 2901614,
+          "stage": "RETRIEVE_VECTOR",
+          "tokens": 20
+        },
+        {
+          "t": 3618,
+          "cumulativeTokens": 2918832,
+          "stage": "JUDGE",
+          "tokens": 630
+        }
+      ]
+    },
+    {
+      "experimentId": "E_FULL",
+      "displayName": "全开：语义分块 + 多路融合 + 按意图路由",
+      "chunkStrategy": "SEMANTIC",
+      "retrievalStrategy": "MULTI_CHANNEL",
+      "routingStrategy": "INTENT_ROUTED",
+      "cacheStrategy": "DISABLED",
+      "inputTokens": 2033205,
+      "outputTokens": 246850,
+      "totalTokens": 2280055,
+      "cachedInputTokens": 0,
+      "cacheHitRate": 0.0,
+      "cachedTokenRatio": 0.0,
+      "totalCostUsd": 1.8004,
+      "totalLatencyMs": 26610,
+      "avgLatencyMs": 53.2,
+      "turns": 500,
+      "chunkCount": 1220,
+      "qualityScore": 0.4346,
+      "qualityScorePct": 43.5,
+      "tokensPerTurn": 4560.1,
+      "costPerTurnUsd": 0.003601,
+      "inputTokensPerTurn": 4066.4,
+      "outputTokensPerTurn": 493.7,
+      "stages": [
+        {
+          "stage": "GENERATE",
+          "calls": 500,
+          "inputTokens": 1070452,
+          "outputTokens": 114282,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.710835,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "EMBED",
+          "calls": 77,
+          "inputTokens": 370243,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.007405,
+          "totalLatencyMs": 77
+        },
+        {
+          "stage": "JUDGE",
+          "calls": 426,
+          "inputTokens": 194039,
+          "outputTokens": 58461,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.033086,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "INTENT",
+          "calls": 500,
+          "inputTokens": 206192,
+          "outputTokens": 28067,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.021536,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "REWRITE",
+          "calls": 426,
+          "inputTokens": 175733,
+          "outputTokens": 46040,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.027203,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "RETRIEVE_VECTOR",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 5112
+        },
+        {
+          "stage": "RETRIEVE_KEYWORD",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 5112
+        },
+        {
+          "stage": "PARSE",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 200
+        },
+        {
+          "stage": "CHUNK",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 213
+        },
+        {
+          "stage": "FUSION",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 7022
+        },
+        {
+          "stage": "RERANK",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 7022
+        }
+      ],
+      "tokensByModel": {
+        "local": 0,
+        "text-embedding-v4": 386789,
+        "qwen-flash": 749077,
+        "qwen3-rerank": 0,
+        "qwen3.8": 1144189
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "cumulativeTokens": 0,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 20,
+          "cumulativeTokens": 10836,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 40,
+          "cumulativeTokens": 21676,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 60,
+          "cumulativeTokens": 32474,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 80,
+          "cumulativeTokens": 46346,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 100,
+          "cumulativeTokens": 61433,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 120,
+          "cumulativeTokens": 76922,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 140,
+          "cumulativeTokens": 97196,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 160,
+          "cumulativeTokens": 112611,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 180,
+          "cumulativeTokens": 133109,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 200,
+          "cumulativeTokens": 148264,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 220,
+          "cumulativeTokens": 163097,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 240,
+          "cumulativeTokens": 177930,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 260,
+          "cumulativeTokens": 198096,
+          "stage": "EMBED",
+          "tokens": 5308
+        },
+        {
+          "t": 280,
+          "cumulativeTokens": 212882,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 300,
+          "cumulativeTokens": 225057,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 320,
+          "cumulativeTokens": 240880,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 340,
+          "cumulativeTokens": 257125,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 360,
+          "cumulativeTokens": 273419,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 380,
+          "cumulativeTokens": 289642,
+          "stage": "EMBED",
+          "tokens": 4019
+        },
+        {
+          "t": 400,
+          "cumulativeTokens": 305594,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 420,
+          "cumulativeTokens": 321176,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 440,
+          "cumulativeTokens": 337007,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 460,
+          "cumulativeTokens": 353069,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 480,
+          "cumulativeTokens": 371208,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 500,
+          "cumulativeTokens": 381843,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 14
+        },
+        {
+          "t": 520,
+          "cumulativeTokens": 393772,
+          "stage": "JUDGE",
+          "tokens": 567
+        },
+        {
+          "t": 540,
+          "cumulativeTokens": 404379,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 560,
+          "cumulativeTokens": 418038,
+          "stage": "JUDGE",
+          "tokens": 604
+        },
+        {
+          "t": 580,
+          "cumulativeTokens": 428100,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 600,
+          "cumulativeTokens": 441022,
+          "stage": "JUDGE",
+          "tokens": 521
+        },
+        {
+          "t": 620,
+          "cumulativeTokens": 450838,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 640,
+          "cumulativeTokens": 462778,
+          "stage": "JUDGE",
+          "tokens": 515
+        },
+        {
+          "t": 660,
+          "cumulativeTokens": 472546,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 680,
+          "cumulativeTokens": 485779,
+          "stage": "JUDGE",
+          "tokens": 633
+        },
+        {
+          "t": 700,
+          "cumulativeTokens": 496579,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 10
+        },
+        {
+          "t": 720,
+          "cumulativeTokens": 509699,
+          "stage": "JUDGE",
+          "tokens": 582
+        },
+        {
+          "t": 740,
+          "cumulativeTokens": 520156,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 760,
+          "cumulativeTokens": 532825,
+          "stage": "JUDGE",
+          "tokens": 521
+        },
+        {
+          "t": 780,
+          "cumulativeTokens": 542216,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 800,
+          "cumulativeTokens": 555377,
+          "stage": "JUDGE",
+          "tokens": 543
+        },
+        {
+          "t": 820,
+          "cumulativeTokens": 565945,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 840,
+          "cumulativeTokens": 579197,
+          "stage": "JUDGE",
+          "tokens": 569
+        },
+        {
+          "t": 860,
+          "cumulativeTokens": 589428,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 13
+        },
+        {
+          "t": 880,
+          "cumulativeTokens": 601652,
+          "stage": "JUDGE",
+          "tokens": 501
+        },
+        {
+          "t": 900,
+          "cumulativeTokens": 611422,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 920,
+          "cumulativeTokens": 623817,
+          "stage": "JUDGE",
+          "tokens": 590
+        },
+        {
+          "t": 940,
+          "cumulativeTokens": 634508,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 9
+        },
+        {
+          "t": 960,
+          "cumulativeTokens": 648041,
+          "stage": "JUDGE",
+          "tokens": 568
+        },
+        {
+          "t": 980,
+          "cumulativeTokens": 658899,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 1000,
+          "cumulativeTokens": 671907,
+          "stage": "JUDGE",
+          "tokens": 547
+        },
+        {
+          "t": 1020,
+          "cumulativeTokens": 681622,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 1040,
+          "cumulativeTokens": 693878,
+          "stage": "JUDGE",
+          "tokens": 584
+        },
+        {
+          "t": 1060,
+          "cumulativeTokens": 704687,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 1080,
+          "cumulativeTokens": 718036,
+          "stage": "JUDGE",
+          "tokens": 596
+        },
+        {
+          "t": 1100,
+          "cumulativeTokens": 727889,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 1120,
+          "cumulativeTokens": 739417,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 1140,
+          "cumulativeTokens": 750512,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 1160,
+          "cumulativeTokens": 762553,
+          "stage": "JUDGE",
+          "tokens": 611
+        },
+        {
+          "t": 1180,
+          "cumulativeTokens": 772914,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 1200,
+          "cumulativeTokens": 784594,
+          "stage": "JUDGE",
+          "tokens": 585
+        },
+        {
+          "t": 1220,
+          "cumulativeTokens": 794436,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 1240,
+          "cumulativeTokens": 806190,
+          "stage": "JUDGE",
+          "tokens": 573
+        },
+        {
+          "t": 1260,
+          "cumulativeTokens": 815796,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 1280,
+          "cumulativeTokens": 828435,
+          "stage": "JUDGE",
+          "tokens": 629
+        },
+        {
+          "t": 1300,
+          "cumulativeTokens": 838321,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 1320,
+          "cumulativeTokens": 850814,
+          "stage": "JUDGE",
+          "tokens": 627
+        },
+        {
+          "t": 1340,
+          "cumulativeTokens": 861261,
+          "stage": "JUDGE",
+          "tokens": 580
+        },
+        {
+          "t": 1360,
+          "cumulativeTokens": 870885,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 1380,
+          "cumulativeTokens": 883820,
+          "stage": "JUDGE",
+          "tokens": 623
+        },
+        {
+          "t": 1400,
+          "cumulativeTokens": 894871,
+          "stage": "JUDGE",
+          "tokens": 593
+        },
+        {
+          "t": 1420,
+          "cumulativeTokens": 904793,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 1440,
+          "cumulativeTokens": 916406,
+          "stage": "JUDGE",
+          "tokens": 578
+        },
+        {
+          "t": 1460,
+          "cumulativeTokens": 926023,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 1480,
+          "cumulativeTokens": 938894,
+          "stage": "JUDGE",
+          "tokens": 626
+        },
+        {
+          "t": 1500,
+          "cumulativeTokens": 948645,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 1520,
+          "cumulativeTokens": 961044,
+          "stage": "JUDGE",
+          "tokens": 639
+        },
+        {
+          "t": 1540,
+          "cumulativeTokens": 970495,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 1560,
+          "cumulativeTokens": 982907,
+          "stage": "JUDGE",
+          "tokens": 619
+        },
+        {
+          "t": 1580,
+          "cumulativeTokens": 993138,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 1600,
+          "cumulativeTokens": 1005216,
+          "stage": "JUDGE",
+          "tokens": 618
+        },
+        {
+          "t": 1620,
+          "cumulativeTokens": 1015137,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 1640,
+          "cumulativeTokens": 1026922,
+          "stage": "JUDGE",
+          "tokens": 655
+        },
+        {
+          "t": 1660,
+          "cumulativeTokens": 1038129,
+          "stage": "JUDGE",
+          "tokens": 623
+        },
+        {
+          "t": 1680,
+          "cumulativeTokens": 1049192,
+          "stage": "JUDGE",
+          "tokens": 627
+        },
+        {
+          "t": 1700,
+          "cumulativeTokens": 1059068,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 1720,
+          "cumulativeTokens": 1071430,
+          "stage": "JUDGE",
+          "tokens": 636
+        },
+        {
+          "t": 1740,
+          "cumulativeTokens": 1081913,
+          "stage": "GENERATE",
+          "tokens": 551
+        },
+        {
+          "t": 1760,
+          "cumulativeTokens": 1091322,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 1780,
+          "cumulativeTokens": 1103878,
+          "stage": "JUDGE",
+          "tokens": 619
+        },
+        {
+          "t": 1800,
+          "cumulativeTokens": 1113486,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 1820,
+          "cumulativeTokens": 1125092,
+          "stage": "JUDGE",
+          "tokens": 585
+        },
+        {
+          "t": 1840,
+          "cumulativeTokens": 1135439,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 1860,
+          "cumulativeTokens": 1145013,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 7
+        },
+        {
+          "t": 1880,
+          "cumulativeTokens": 1156986,
+          "stage": "JUDGE",
+          "tokens": 541
+        },
+        {
+          "t": 1900,
+          "cumulativeTokens": 1166381,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 1920,
+          "cumulativeTokens": 1177880,
+          "stage": "JUDGE",
+          "tokens": 587
+        },
+        {
+          "t": 1940,
+          "cumulativeTokens": 1187133,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 1960,
+          "cumulativeTokens": 1198563,
+          "stage": "JUDGE",
+          "tokens": 526
+        },
+        {
+          "t": 1980,
+          "cumulativeTokens": 1208008,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2000,
+          "cumulativeTokens": 1220525,
+          "stage": "JUDGE",
+          "tokens": 639
+        },
+        {
+          "t": 2020,
+          "cumulativeTokens": 1229939,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 2040,
+          "cumulativeTokens": 1241546,
+          "stage": "JUDGE",
+          "tokens": 601
+        },
+        {
+          "t": 2060,
+          "cumulativeTokens": 1251122,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2080,
+          "cumulativeTokens": 1262695,
+          "stage": "JUDGE",
+          "tokens": 581
+        },
+        {
+          "t": 2100,
+          "cumulativeTokens": 1272315,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 14
+        },
+        {
+          "t": 2120,
+          "cumulativeTokens": 1284350,
+          "stage": "JUDGE",
+          "tokens": 632
+        },
+        {
+          "t": 2140,
+          "cumulativeTokens": 1294078,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2160,
+          "cumulativeTokens": 1305598,
+          "stage": "JUDGE",
+          "tokens": 627
+        },
+        {
+          "t": 2180,
+          "cumulativeTokens": 1315140,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 2200,
+          "cumulativeTokens": 1325320,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 2220,
+          "cumulativeTokens": 1336871,
+          "stage": "JUDGE",
+          "tokens": 533
+        },
+        {
+          "t": 2240,
+          "cumulativeTokens": 1346619,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2260,
+          "cumulativeTokens": 1358882,
+          "stage": "JUDGE",
+          "tokens": 619
+        },
+        {
+          "t": 2280,
+          "cumulativeTokens": 1368298,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 2300,
+          "cumulativeTokens": 1380013,
+          "stage": "JUDGE",
+          "tokens": 598
+        },
+        {
+          "t": 2320,
+          "cumulativeTokens": 1390515,
+          "stage": "JUDGE",
+          "tokens": 629
+        },
+        {
+          "t": 2340,
+          "cumulativeTokens": 1400847,
+          "stage": "JUDGE",
+          "tokens": 548
+        },
+        {
+          "t": 2360,
+          "cumulativeTokens": 1410302,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 28
+        },
+        {
+          "t": 2380,
+          "cumulativeTokens": 1422269,
+          "stage": "JUDGE",
+          "tokens": 583
+        },
+        {
+          "t": 2400,
+          "cumulativeTokens": 1431926,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 2420,
+          "cumulativeTokens": 1443889,
+          "stage": "JUDGE",
+          "tokens": 635
+        },
+        {
+          "t": 2440,
+          "cumulativeTokens": 1453191,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 2460,
+          "cumulativeTokens": 1464888,
+          "stage": "JUDGE",
+          "tokens": 622
+        },
+        {
+          "t": 2480,
+          "cumulativeTokens": 1473564,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 2500,
+          "cumulativeTokens": 1483329,
+          "stage": "JUDGE",
+          "tokens": 521
+        },
+        {
+          "t": 2520,
+          "cumulativeTokens": 1492766,
+          "stage": "JUDGE",
+          "tokens": 491
+        },
+        {
+          "t": 2540,
+          "cumulativeTokens": 1501627,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 2560,
+          "cumulativeTokens": 1511891,
+          "stage": "JUDGE",
+          "tokens": 545
+        },
+        {
+          "t": 2580,
+          "cumulativeTokens": 1520788,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 2600,
+          "cumulativeTokens": 1531714,
+          "stage": "JUDGE",
+          "tokens": 593
+        },
+        {
+          "t": 2620,
+          "cumulativeTokens": 1539788,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 2640,
+          "cumulativeTokens": 1550354,
+          "stage": "JUDGE",
+          "tokens": 581
+        },
+        {
+          "t": 2660,
+          "cumulativeTokens": 1559716,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 2680,
+          "cumulativeTokens": 1569828,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2700,
+          "cumulativeTokens": 1580828,
+          "stage": "JUDGE",
+          "tokens": 579
+        },
+        {
+          "t": 2720,
+          "cumulativeTokens": 1590447,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 2740,
+          "cumulativeTokens": 1600889,
+          "stage": "JUDGE",
+          "tokens": 543
+        },
+        {
+          "t": 2760,
+          "cumulativeTokens": 1609075,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2780,
+          "cumulativeTokens": 1619547,
+          "stage": "JUDGE",
+          "tokens": 498
+        },
+        {
+          "t": 2800,
+          "cumulativeTokens": 1629632,
+          "stage": "GENERATE",
+          "tokens": 546
+        },
+        {
+          "t": 2820,
+          "cumulativeTokens": 1638362,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 2840,
+          "cumulativeTokens": 1649107,
+          "stage": "JUDGE",
+          "tokens": 653
+        },
+        {
+          "t": 2860,
+          "cumulativeTokens": 1658316,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2880,
+          "cumulativeTokens": 1667934,
+          "stage": "JUDGE",
+          "tokens": 495
+        },
+        {
+          "t": 2900,
+          "cumulativeTokens": 1676639,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2920,
+          "cumulativeTokens": 1687212,
+          "stage": "JUDGE",
+          "tokens": 536
+        },
+        {
+          "t": 2940,
+          "cumulativeTokens": 1695890,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 2960,
+          "cumulativeTokens": 1706522,
+          "stage": "JUDGE",
+          "tokens": 583
+        },
+        {
+          "t": 2980,
+          "cumulativeTokens": 1716748,
+          "stage": "JUDGE",
+          "tokens": 655
+        },
+        {
+          "t": 3000,
+          "cumulativeTokens": 1725454,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 3020,
+          "cumulativeTokens": 1735350,
+          "stage": "JUDGE",
+          "tokens": 542
+        },
+        {
+          "t": 3040,
+          "cumulativeTokens": 1743571,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 3060,
+          "cumulativeTokens": 1754206,
+          "stage": "JUDGE",
+          "tokens": 612
+        },
+        {
+          "t": 3080,
+          "cumulativeTokens": 1763292,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 3100,
+          "cumulativeTokens": 1773223,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 3120,
+          "cumulativeTokens": 1785007,
+          "stage": "JUDGE",
+          "tokens": 681
+        },
+        {
+          "t": 3140,
+          "cumulativeTokens": 1794959,
+          "stage": "JUDGE",
+          "tokens": 591
+        },
+        {
+          "t": 3160,
+          "cumulativeTokens": 1804896,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 13
+        },
+        {
+          "t": 3180,
+          "cumulativeTokens": 1816244,
+          "stage": "JUDGE",
+          "tokens": 588
+        },
+        {
+          "t": 3200,
+          "cumulativeTokens": 1826337,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 3220,
+          "cumulativeTokens": 1837997,
+          "stage": "JUDGE",
+          "tokens": 661
+        },
+        {
+          "t": 3240,
+          "cumulativeTokens": 1848180,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 3260,
+          "cumulativeTokens": 1859343,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3280,
+          "cumulativeTokens": 1871198,
+          "stage": "JUDGE",
+          "tokens": 623
+        },
+        {
+          "t": 3300,
+          "cumulativeTokens": 1882296,
+          "stage": "GENERATE",
+          "tokens": 553
+        },
+        {
+          "t": 3320,
+          "cumulativeTokens": 1892768,
+          "stage": "GENERATE",
+          "tokens": 545
+        },
+        {
+          "t": 3340,
+          "cumulativeTokens": 1902626,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 3360,
+          "cumulativeTokens": 1914291,
+          "stage": "JUDGE",
+          "tokens": 597
+        },
+        {
+          "t": 3380,
+          "cumulativeTokens": 1924022,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 3400,
+          "cumulativeTokens": 1934646,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3420,
+          "cumulativeTokens": 1947447,
+          "stage": "JUDGE",
+          "tokens": 665
+        },
+        {
+          "t": 3440,
+          "cumulativeTokens": 1957288,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 3460,
+          "cumulativeTokens": 1969134,
+          "stage": "JUDGE",
+          "tokens": 595
+        },
+        {
+          "t": 3480,
+          "cumulativeTokens": 1978881,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3500,
+          "cumulativeTokens": 1991105,
+          "stage": "JUDGE",
+          "tokens": 650
+        },
+        {
+          "t": 3520,
+          "cumulativeTokens": 2000557,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 28
+        },
+        {
+          "t": 3540,
+          "cumulativeTokens": 2012902,
+          "stage": "JUDGE",
+          "tokens": 580
+        },
+        {
+          "t": 3560,
+          "cumulativeTokens": 2023292,
+          "stage": "JUDGE",
+          "tokens": 595
+        },
+        {
+          "t": 3580,
+          "cumulativeTokens": 2033114,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3600,
+          "cumulativeTokens": 2045095,
+          "stage": "JUDGE",
+          "tokens": 643
+        },
+        {
+          "t": 3620,
+          "cumulativeTokens": 2055164,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 3640,
+          "cumulativeTokens": 2067501,
+          "stage": "JUDGE",
+          "tokens": 578
+        },
+        {
+          "t": 3660,
+          "cumulativeTokens": 2077390,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3680,
+          "cumulativeTokens": 2089457,
+          "stage": "JUDGE",
+          "tokens": 619
+        },
+        {
+          "t": 3700,
+          "cumulativeTokens": 2100527,
+          "stage": "JUDGE",
+          "tokens": 643
+        },
+        {
+          "t": 3720,
+          "cumulativeTokens": 2110449,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 3740,
+          "cumulativeTokens": 2122917,
+          "stage": "JUDGE",
+          "tokens": 606
+        },
+        {
+          "t": 3760,
+          "cumulativeTokens": 2133664,
+          "stage": "JUDGE",
+          "tokens": 591
+        },
+        {
+          "t": 3780,
+          "cumulativeTokens": 2143322,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 3800,
+          "cumulativeTokens": 2153650,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3820,
+          "cumulativeTokens": 2166219,
+          "stage": "JUDGE",
+          "tokens": 651
+        },
+        {
+          "t": 3840,
+          "cumulativeTokens": 2175922,
+          "stage": "GENERATE",
+          "tokens": 548
+        },
+        {
+          "t": 3860,
+          "cumulativeTokens": 2185365,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 3880,
+          "cumulativeTokens": 2197245,
+          "stage": "JUDGE",
+          "tokens": 537
+        },
+        {
+          "t": 3900,
+          "cumulativeTokens": 2206692,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3920,
+          "cumulativeTokens": 2219591,
+          "stage": "JUDGE",
+          "tokens": 618
+        },
+        {
+          "t": 3940,
+          "cumulativeTokens": 2230106,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 3960,
+          "cumulativeTokens": 2241527,
+          "stage": "JUDGE",
+          "tokens": 565
+        },
+        {
+          "t": 3980,
+          "cumulativeTokens": 2250258,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 4000,
+          "cumulativeTokens": 2262816,
+          "stage": "JUDGE",
+          "tokens": 644
+        },
+        {
+          "t": 4020,
+          "cumulativeTokens": 2271944,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 4032,
+          "cumulativeTokens": 2280055,
+          "stage": "JUDGE",
+          "tokens": 630
+        }
+      ]
+    },
+    {
+      "experimentId": "E_FULL_CACHE",
+      "displayName": "全开 + 缓存：语义分块 + 多路融合 + 按意图路由 + 响应缓存",
+      "chunkStrategy": "SEMANTIC",
+      "retrievalStrategy": "MULTI_CHANNEL",
+      "routingStrategy": "INTENT_ROUTED",
+      "cacheStrategy": "ENABLED",
+      "inputTokens": 2033205,
+      "outputTokens": 246850,
+      "totalTokens": 2280055,
+      "cachedInputTokens": 438371,
+      "cacheHitRate": 0.0079,
+      "cachedTokenRatio": 0.2156,
+      "totalCostUsd": 1.6816,
+      "totalLatencyMs": 26604,
+      "avgLatencyMs": 53.2,
+      "turns": 500,
+      "chunkCount": 1220,
+      "qualityScore": 0.4346,
+      "qualityScorePct": 43.5,
+      "tokensPerTurn": 4560.1,
+      "costPerTurnUsd": 0.003363,
+      "inputTokensPerTurn": 4066.4,
+      "outputTokensPerTurn": 493.7,
+      "stages": [
+        {
+          "stage": "GENERATE",
+          "calls": 500,
+          "inputTokens": 1070452,
+          "outputTokens": 114282,
+          "cachedInputTokens": 125443,
+          "cacheHits": 9,
+          "totalCostUsd": 1.604581,
+          "totalLatencyMs": 502
+        },
+        {
+          "stage": "EMBED",
+          "calls": 77,
+          "inputTokens": 370243,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.007405,
+          "totalLatencyMs": 77
+        },
+        {
+          "stage": "JUDGE",
+          "calls": 426,
+          "inputTokens": 194039,
+          "outputTokens": 58461,
+          "cachedInputTokens": 61560,
+          "cacheHits": 5,
+          "totalCostUsd": 0.030624,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "INTENT",
+          "calls": 500,
+          "inputTokens": 206192,
+          "outputTokens": 28067,
+          "cachedInputTokens": 106603,
+          "cacheHits": 9,
+          "totalCostUsd": 0.017272,
+          "totalLatencyMs": 500
+        },
+        {
+          "stage": "REWRITE",
+          "calls": 426,
+          "inputTokens": 175733,
+          "outputTokens": 46040,
+          "cachedInputTokens": 144765,
+          "cacheHits": 9,
+          "totalCostUsd": 0.021412,
+          "totalLatencyMs": 426
+        },
+        {
+          "stage": "RETRIEVE_VECTOR",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 5112
+        },
+        {
+          "stage": "RETRIEVE_KEYWORD",
+          "calls": 426,
+          "inputTokens": 8273,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 1.65E-4,
+          "totalLatencyMs": 5112
+        },
+        {
+          "stage": "PARSE",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 200
+        },
+        {
+          "stage": "CHUNK",
+          "calls": 200,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 205
+        },
+        {
+          "stage": "FUSION",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 7022
+        },
+        {
+          "stage": "RERANK",
+          "calls": 426,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedInputTokens": 0,
+          "cacheHits": 0,
+          "totalCostUsd": 0.0,
+          "totalLatencyMs": 7022
+        }
+      ],
+      "tokensByModel": {
+        "local": 0,
+        "text-embedding-v4": 386789,
+        "qwen-flash": 749077,
+        "qwen3-rerank": 0,
+        "qwen3.8": 1144189
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "cumulativeTokens": 0,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 20,
+          "cumulativeTokens": 10836,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 40,
+          "cumulativeTokens": 21676,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 60,
+          "cumulativeTokens": 32474,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 80,
+          "cumulativeTokens": 46346,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 100,
+          "cumulativeTokens": 61433,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 120,
+          "cumulativeTokens": 76922,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 140,
+          "cumulativeTokens": 97196,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 160,
+          "cumulativeTokens": 112611,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 180,
+          "cumulativeTokens": 133109,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 200,
+          "cumulativeTokens": 148264,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 220,
+          "cumulativeTokens": 163097,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 240,
+          "cumulativeTokens": 177930,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 260,
+          "cumulativeTokens": 198096,
+          "stage": "EMBED",
+          "tokens": 5308
+        },
+        {
+          "t": 280,
+          "cumulativeTokens": 212882,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 300,
+          "cumulativeTokens": 225057,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 320,
+          "cumulativeTokens": 240880,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 340,
+          "cumulativeTokens": 257125,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 360,
+          "cumulativeTokens": 273419,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 380,
+          "cumulativeTokens": 289642,
+          "stage": "EMBED",
+          "tokens": 4019
+        },
+        {
+          "t": 400,
+          "cumulativeTokens": 305594,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 420,
+          "cumulativeTokens": 321176,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 440,
+          "cumulativeTokens": 337007,
+          "stage": "PARSE",
+          "tokens": 0
+        },
+        {
+          "t": 460,
+          "cumulativeTokens": 353069,
+          "stage": "CHUNK",
+          "tokens": 0
+        },
+        {
+          "t": 480,
+          "cumulativeTokens": 371208,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 500,
+          "cumulativeTokens": 381843,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 14
+        },
+        {
+          "t": 520,
+          "cumulativeTokens": 393772,
+          "stage": "JUDGE",
+          "tokens": 567
+        },
+        {
+          "t": 540,
+          "cumulativeTokens": 404379,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 560,
+          "cumulativeTokens": 418038,
+          "stage": "JUDGE",
+          "tokens": 604
+        },
+        {
+          "t": 580,
+          "cumulativeTokens": 428100,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 600,
+          "cumulativeTokens": 441022,
+          "stage": "JUDGE",
+          "tokens": 521
+        },
+        {
+          "t": 620,
+          "cumulativeTokens": 450838,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 640,
+          "cumulativeTokens": 462778,
+          "stage": "JUDGE",
+          "tokens": 515
+        },
+        {
+          "t": 660,
+          "cumulativeTokens": 472546,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 680,
+          "cumulativeTokens": 485779,
+          "stage": "JUDGE",
+          "tokens": 633
+        },
+        {
+          "t": 700,
+          "cumulativeTokens": 496579,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 10
+        },
+        {
+          "t": 720,
+          "cumulativeTokens": 509699,
+          "stage": "JUDGE",
+          "tokens": 582
+        },
+        {
+          "t": 740,
+          "cumulativeTokens": 520156,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 760,
+          "cumulativeTokens": 532825,
+          "stage": "JUDGE",
+          "tokens": 521
+        },
+        {
+          "t": 780,
+          "cumulativeTokens": 542216,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 800,
+          "cumulativeTokens": 555377,
+          "stage": "JUDGE",
+          "tokens": 543
+        },
+        {
+          "t": 820,
+          "cumulativeTokens": 565945,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 840,
+          "cumulativeTokens": 579197,
+          "stage": "JUDGE",
+          "tokens": 569
+        },
+        {
+          "t": 860,
+          "cumulativeTokens": 589428,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 13
+        },
+        {
+          "t": 880,
+          "cumulativeTokens": 601652,
+          "stage": "JUDGE",
+          "tokens": 501
+        },
+        {
+          "t": 900,
+          "cumulativeTokens": 611422,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 920,
+          "cumulativeTokens": 623817,
+          "stage": "JUDGE",
+          "tokens": 590
+        },
+        {
+          "t": 940,
+          "cumulativeTokens": 634508,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 9
+        },
+        {
+          "t": 960,
+          "cumulativeTokens": 648041,
+          "stage": "JUDGE",
+          "tokens": 568
+        },
+        {
+          "t": 980,
+          "cumulativeTokens": 658899,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 1000,
+          "cumulativeTokens": 671907,
+          "stage": "JUDGE",
+          "tokens": 547
+        },
+        {
+          "t": 1020,
+          "cumulativeTokens": 681622,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 1040,
+          "cumulativeTokens": 693878,
+          "stage": "JUDGE",
+          "tokens": 584
+        },
+        {
+          "t": 1060,
+          "cumulativeTokens": 704687,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 1080,
+          "cumulativeTokens": 718036,
+          "stage": "JUDGE",
+          "tokens": 596
+        },
+        {
+          "t": 1100,
+          "cumulativeTokens": 727889,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 1120,
+          "cumulativeTokens": 739417,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 1140,
+          "cumulativeTokens": 750512,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 1160,
+          "cumulativeTokens": 762553,
+          "stage": "JUDGE",
+          "tokens": 611
+        },
+        {
+          "t": 1180,
+          "cumulativeTokens": 772914,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 1200,
+          "cumulativeTokens": 784594,
+          "stage": "JUDGE",
+          "tokens": 585
+        },
+        {
+          "t": 1220,
+          "cumulativeTokens": 794436,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 19
+        },
+        {
+          "t": 1240,
+          "cumulativeTokens": 806190,
+          "stage": "JUDGE",
+          "tokens": 573
+        },
+        {
+          "t": 1260,
+          "cumulativeTokens": 815796,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 1280,
+          "cumulativeTokens": 828435,
+          "stage": "JUDGE",
+          "tokens": 629
+        },
+        {
+          "t": 1300,
+          "cumulativeTokens": 838321,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 1320,
+          "cumulativeTokens": 850814,
+          "stage": "JUDGE",
+          "tokens": 627
+        },
+        {
+          "t": 1340,
+          "cumulativeTokens": 861261,
+          "stage": "JUDGE",
+          "tokens": 580
+        },
+        {
+          "t": 1360,
+          "cumulativeTokens": 870885,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 1380,
+          "cumulativeTokens": 883820,
+          "stage": "JUDGE",
+          "tokens": 623
+        },
+        {
+          "t": 1400,
+          "cumulativeTokens": 894871,
+          "stage": "JUDGE",
+          "tokens": 593
+        },
+        {
+          "t": 1420,
+          "cumulativeTokens": 904793,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 1440,
+          "cumulativeTokens": 916406,
+          "stage": "JUDGE",
+          "tokens": 578
+        },
+        {
+          "t": 1460,
+          "cumulativeTokens": 926023,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 1480,
+          "cumulativeTokens": 938894,
+          "stage": "JUDGE",
+          "tokens": 626
+        },
+        {
+          "t": 1500,
+          "cumulativeTokens": 948645,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 1520,
+          "cumulativeTokens": 961044,
+          "stage": "JUDGE",
+          "tokens": 639
+        },
+        {
+          "t": 1540,
+          "cumulativeTokens": 970495,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 1560,
+          "cumulativeTokens": 982907,
+          "stage": "JUDGE",
+          "tokens": 619
+        },
+        {
+          "t": 1580,
+          "cumulativeTokens": 993138,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 1600,
+          "cumulativeTokens": 1005216,
+          "stage": "JUDGE",
+          "tokens": 618
+        },
+        {
+          "t": 1620,
+          "cumulativeTokens": 1015137,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 1640,
+          "cumulativeTokens": 1026922,
+          "stage": "JUDGE",
+          "tokens": 655
+        },
+        {
+          "t": 1660,
+          "cumulativeTokens": 1038129,
+          "stage": "JUDGE",
+          "tokens": 623
+        },
+        {
+          "t": 1680,
+          "cumulativeTokens": 1049192,
+          "stage": "JUDGE",
+          "tokens": 627
+        },
+        {
+          "t": 1700,
+          "cumulativeTokens": 1059068,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 1720,
+          "cumulativeTokens": 1071430,
+          "stage": "JUDGE",
+          "tokens": 636
+        },
+        {
+          "t": 1740,
+          "cumulativeTokens": 1081913,
+          "stage": "GENERATE",
+          "tokens": 551
+        },
+        {
+          "t": 1760,
+          "cumulativeTokens": 1091322,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 1780,
+          "cumulativeTokens": 1103878,
+          "stage": "JUDGE",
+          "tokens": 619
+        },
+        {
+          "t": 1800,
+          "cumulativeTokens": 1113486,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 1820,
+          "cumulativeTokens": 1125092,
+          "stage": "JUDGE",
+          "tokens": 585
+        },
+        {
+          "t": 1840,
+          "cumulativeTokens": 1135439,
+          "stage": "GENERATE",
+          "tokens": 550
+        },
+        {
+          "t": 1860,
+          "cumulativeTokens": 1145013,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 7
+        },
+        {
+          "t": 1880,
+          "cumulativeTokens": 1156986,
+          "stage": "JUDGE",
+          "tokens": 541
+        },
+        {
+          "t": 1900,
+          "cumulativeTokens": 1166381,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 1920,
+          "cumulativeTokens": 1177880,
+          "stage": "JUDGE",
+          "tokens": 587
+        },
+        {
+          "t": 1940,
+          "cumulativeTokens": 1187133,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 1960,
+          "cumulativeTokens": 1198563,
+          "stage": "JUDGE",
+          "tokens": 526
+        },
+        {
+          "t": 1980,
+          "cumulativeTokens": 1208008,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2000,
+          "cumulativeTokens": 1220525,
+          "stage": "JUDGE",
+          "tokens": 639
+        },
+        {
+          "t": 2020,
+          "cumulativeTokens": 1229939,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 2040,
+          "cumulativeTokens": 1241546,
+          "stage": "JUDGE",
+          "tokens": 601
+        },
+        {
+          "t": 2060,
+          "cumulativeTokens": 1251122,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2080,
+          "cumulativeTokens": 1262695,
+          "stage": "JUDGE",
+          "tokens": 581
+        },
+        {
+          "t": 2100,
+          "cumulativeTokens": 1272315,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 14
+        },
+        {
+          "t": 2120,
+          "cumulativeTokens": 1284350,
+          "stage": "JUDGE",
+          "tokens": 632
+        },
+        {
+          "t": 2140,
+          "cumulativeTokens": 1294078,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2160,
+          "cumulativeTokens": 1305598,
+          "stage": "JUDGE",
+          "tokens": 627
+        },
+        {
+          "t": 2180,
+          "cumulativeTokens": 1315140,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 2200,
+          "cumulativeTokens": 1325320,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 20
+        },
+        {
+          "t": 2220,
+          "cumulativeTokens": 1336871,
+          "stage": "JUDGE",
+          "tokens": 533
+        },
+        {
+          "t": 2240,
+          "cumulativeTokens": 1346619,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2260,
+          "cumulativeTokens": 1358882,
+          "stage": "JUDGE",
+          "tokens": 619
+        },
+        {
+          "t": 2280,
+          "cumulativeTokens": 1368298,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 2300,
+          "cumulativeTokens": 1380013,
+          "stage": "JUDGE",
+          "tokens": 598
+        },
+        {
+          "t": 2320,
+          "cumulativeTokens": 1390515,
+          "stage": "JUDGE",
+          "tokens": 629
+        },
+        {
+          "t": 2340,
+          "cumulativeTokens": 1400847,
+          "stage": "JUDGE",
+          "tokens": 548
+        },
+        {
+          "t": 2360,
+          "cumulativeTokens": 1410302,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 28
+        },
+        {
+          "t": 2380,
+          "cumulativeTokens": 1422269,
+          "stage": "JUDGE",
+          "tokens": 583
+        },
+        {
+          "t": 2400,
+          "cumulativeTokens": 1431926,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 2420,
+          "cumulativeTokens": 1443889,
+          "stage": "JUDGE",
+          "tokens": 635
+        },
+        {
+          "t": 2440,
+          "cumulativeTokens": 1453191,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 2460,
+          "cumulativeTokens": 1464888,
+          "stage": "JUDGE",
+          "tokens": 622
+        },
+        {
+          "t": 2480,
+          "cumulativeTokens": 1473564,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 2500,
+          "cumulativeTokens": 1483329,
+          "stage": "JUDGE",
+          "tokens": 521
+        },
+        {
+          "t": 2520,
+          "cumulativeTokens": 1492766,
+          "stage": "JUDGE",
+          "tokens": 491
+        },
+        {
+          "t": 2540,
+          "cumulativeTokens": 1501627,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 11
+        },
+        {
+          "t": 2560,
+          "cumulativeTokens": 1511891,
+          "stage": "JUDGE",
+          "tokens": 545
+        },
+        {
+          "t": 2580,
+          "cumulativeTokens": 1520788,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 2600,
+          "cumulativeTokens": 1531714,
+          "stage": "JUDGE",
+          "tokens": 593
+        },
+        {
+          "t": 2620,
+          "cumulativeTokens": 1539788,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 2640,
+          "cumulativeTokens": 1550354,
+          "stage": "JUDGE",
+          "tokens": 581
+        },
+        {
+          "t": 2660,
+          "cumulativeTokens": 1559716,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 23
+        },
+        {
+          "t": 2680,
+          "cumulativeTokens": 1569828,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2700,
+          "cumulativeTokens": 1580828,
+          "stage": "JUDGE",
+          "tokens": 579
+        },
+        {
+          "t": 2720,
+          "cumulativeTokens": 1590447,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 2740,
+          "cumulativeTokens": 1600889,
+          "stage": "JUDGE",
+          "tokens": 543
+        },
+        {
+          "t": 2760,
+          "cumulativeTokens": 1609075,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2780,
+          "cumulativeTokens": 1619547,
+          "stage": "JUDGE",
+          "tokens": 498
+        },
+        {
+          "t": 2800,
+          "cumulativeTokens": 1629632,
+          "stage": "GENERATE",
+          "tokens": 546
+        },
+        {
+          "t": 2820,
+          "cumulativeTokens": 1638362,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 2840,
+          "cumulativeTokens": 1649107,
+          "stage": "JUDGE",
+          "tokens": 653
+        },
+        {
+          "t": 2860,
+          "cumulativeTokens": 1658316,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 25
+        },
+        {
+          "t": 2880,
+          "cumulativeTokens": 1667934,
+          "stage": "JUDGE",
+          "tokens": 495
+        },
+        {
+          "t": 2900,
+          "cumulativeTokens": 1676639,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 2920,
+          "cumulativeTokens": 1687212,
+          "stage": "JUDGE",
+          "tokens": 536
+        },
+        {
+          "t": 2940,
+          "cumulativeTokens": 1695890,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 2960,
+          "cumulativeTokens": 1706522,
+          "stage": "JUDGE",
+          "tokens": 583
+        },
+        {
+          "t": 2980,
+          "cumulativeTokens": 1716748,
+          "stage": "JUDGE",
+          "tokens": 655
+        },
+        {
+          "t": 3000,
+          "cumulativeTokens": 1725454,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 26
+        },
+        {
+          "t": 3020,
+          "cumulativeTokens": 1735350,
+          "stage": "JUDGE",
+          "tokens": 542
+        },
+        {
+          "t": 3040,
+          "cumulativeTokens": 1743571,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 3060,
+          "cumulativeTokens": 1754206,
+          "stage": "JUDGE",
+          "tokens": 612
+        },
+        {
+          "t": 3080,
+          "cumulativeTokens": 1763292,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 3100,
+          "cumulativeTokens": 1773223,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 3120,
+          "cumulativeTokens": 1785007,
+          "stage": "JUDGE",
+          "tokens": 681
+        },
+        {
+          "t": 3140,
+          "cumulativeTokens": 1794959,
+          "stage": "JUDGE",
+          "tokens": 591
+        },
+        {
+          "t": 3160,
+          "cumulativeTokens": 1804896,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 13
+        },
+        {
+          "t": 3180,
+          "cumulativeTokens": 1816244,
+          "stage": "JUDGE",
+          "tokens": 588
+        },
+        {
+          "t": 3200,
+          "cumulativeTokens": 1826337,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 3220,
+          "cumulativeTokens": 1837997,
+          "stage": "JUDGE",
+          "tokens": 661
+        },
+        {
+          "t": 3240,
+          "cumulativeTokens": 1848180,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 3260,
+          "cumulativeTokens": 1859343,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3280,
+          "cumulativeTokens": 1871198,
+          "stage": "JUDGE",
+          "tokens": 623
+        },
+        {
+          "t": 3300,
+          "cumulativeTokens": 1882296,
+          "stage": "GENERATE",
+          "tokens": 553
+        },
+        {
+          "t": 3320,
+          "cumulativeTokens": 1892768,
+          "stage": "GENERATE",
+          "tokens": 545
+        },
+        {
+          "t": 3340,
+          "cumulativeTokens": 1902626,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 16
+        },
+        {
+          "t": 3360,
+          "cumulativeTokens": 1914291,
+          "stage": "JUDGE",
+          "tokens": 597
+        },
+        {
+          "t": 3380,
+          "cumulativeTokens": 1924022,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 21
+        },
+        {
+          "t": 3400,
+          "cumulativeTokens": 1934646,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3420,
+          "cumulativeTokens": 1947447,
+          "stage": "JUDGE",
+          "tokens": 665
+        },
+        {
+          "t": 3440,
+          "cumulativeTokens": 1957288,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 3460,
+          "cumulativeTokens": 1969134,
+          "stage": "JUDGE",
+          "tokens": 595
+        },
+        {
+          "t": 3480,
+          "cumulativeTokens": 1978881,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3500,
+          "cumulativeTokens": 1991105,
+          "stage": "JUDGE",
+          "tokens": 650
+        },
+        {
+          "t": 3520,
+          "cumulativeTokens": 2000557,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 28
+        },
+        {
+          "t": 3540,
+          "cumulativeTokens": 2012902,
+          "stage": "JUDGE",
+          "tokens": 580
+        },
+        {
+          "t": 3560,
+          "cumulativeTokens": 2023292,
+          "stage": "JUDGE",
+          "tokens": 595
+        },
+        {
+          "t": 3580,
+          "cumulativeTokens": 2033114,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3600,
+          "cumulativeTokens": 2045095,
+          "stage": "JUDGE",
+          "tokens": 643
+        },
+        {
+          "t": 3620,
+          "cumulativeTokens": 2055164,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 3640,
+          "cumulativeTokens": 2067501,
+          "stage": "JUDGE",
+          "tokens": 578
+        },
+        {
+          "t": 3660,
+          "cumulativeTokens": 2077390,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 29
+        },
+        {
+          "t": 3680,
+          "cumulativeTokens": 2089457,
+          "stage": "JUDGE",
+          "tokens": 619
+        },
+        {
+          "t": 3700,
+          "cumulativeTokens": 2100527,
+          "stage": "JUDGE",
+          "tokens": 643
+        },
+        {
+          "t": 3720,
+          "cumulativeTokens": 2110449,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 27
+        },
+        {
+          "t": 3740,
+          "cumulativeTokens": 2122917,
+          "stage": "JUDGE",
+          "tokens": 606
+        },
+        {
+          "t": 3760,
+          "cumulativeTokens": 2133664,
+          "stage": "JUDGE",
+          "tokens": 591
+        },
+        {
+          "t": 3780,
+          "cumulativeTokens": 2143322,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 17
+        },
+        {
+          "t": 3800,
+          "cumulativeTokens": 2153650,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3820,
+          "cumulativeTokens": 2166219,
+          "stage": "JUDGE",
+          "tokens": 651
+        },
+        {
+          "t": 3840,
+          "cumulativeTokens": 2175922,
+          "stage": "GENERATE",
+          "tokens": 548
+        },
+        {
+          "t": 3860,
+          "cumulativeTokens": 2185365,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 3880,
+          "cumulativeTokens": 2197245,
+          "stage": "JUDGE",
+          "tokens": 537
+        },
+        {
+          "t": 3900,
+          "cumulativeTokens": 2206692,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 22
+        },
+        {
+          "t": 3920,
+          "cumulativeTokens": 2219591,
+          "stage": "JUDGE",
+          "tokens": 618
+        },
+        {
+          "t": 3940,
+          "cumulativeTokens": 2230106,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 15
+        },
+        {
+          "t": 3960,
+          "cumulativeTokens": 2241527,
+          "stage": "JUDGE",
+          "tokens": 565
+        },
+        {
+          "t": 3980,
+          "cumulativeTokens": 2250258,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 18
+        },
+        {
+          "t": 4000,
+          "cumulativeTokens": 2262816,
+          "stage": "JUDGE",
+          "tokens": 644
+        },
+        {
+          "t": 4020,
+          "cumulativeTokens": 2271944,
+          "stage": "RETRIEVE_KEYWORD",
+          "tokens": 12
+        },
+        {
+          "t": 4032,
+          "cumulativeTokens": 2280055,
+          "stage": "JUDGE",
+          "tokens": 630
+        }
+      ]
+    }
+  ],
+  "deltas": [
+    {
+      "baseline": "A_BASELINE",
+      "candidate": "B_SEMANTIC",
+      "baselineName": "基线：固定分块 + 仅向量 + 固定高档模型",
+      "candidateName": "只改分块：语义分块 + 仅向量 + 固定高档模型",
+      "tokenSavingPct": 22.3,
+      "costSavingPct": 18.9,
+      "qualityDeltaPct": 0.2,
+      "latencyDeltaPct": -36.7,
+      "verdict": "策略 B_SEMANTIC 比策略 A_BASELINE 节省 22.3% token，质量变化 +0.2%，成本节省 18.9%"
+    },
+    {
+      "baseline": "A_BASELINE",
+      "candidate": "C_FUSION",
+      "baselineName": "基线：固定分块 + 仅向量 + 固定高档模型",
+      "candidateName": "只改检索：固定分块 + 多路融合 + 固定高档模型",
+      "tokenSavingPct": -0.7,
+      "costSavingPct": -0.3,
+      "qualityDeltaPct": 3.7,
+      "latencyDeltaPct": 53.9,
+      "verdict": "策略 C_FUSION 比策略 A_BASELINE 节省 -0.7% token，质量变化 +3.7%，成本节省 -0.3%"
+    },
+    {
+      "baseline": "A_BASELINE",
+      "candidate": "D_ROUTED",
+      "baselineName": "基线：固定分块 + 仅向量 + 固定高档模型",
+      "candidateName": "只改路由：固定分块 + 仅向量 + 按意图路由",
+      "tokenSavingPct": 0.0,
+      "costSavingPct": 34.8,
+      "qualityDeltaPct": 0.0,
+      "latencyDeltaPct": -0.4,
+      "verdict": "策略 D_ROUTED 比策略 A_BASELINE 节省 0.0% token，质量变化 +0.0%，成本节省 34.8%"
+    },
+    {
+      "baseline": "A_BASELINE",
+      "candidate": "E_FULL",
+      "baselineName": "基线：固定分块 + 仅向量 + 固定高档模型",
+      "candidateName": "全开：语义分块 + 多路融合 + 按意图路由",
+      "tokenSavingPct": 21.9,
+      "costSavingPct": 53.9,
+      "qualityDeltaPct": 3.8,
+      "latencyDeltaPct": -5.0,
+      "verdict": "策略 E_FULL 比策略 A_BASELINE 节省 21.9% token，质量变化 +3.8%，成本节省 53.9%"
+    },
+    {
+      "baseline": "A_BASELINE",
+      "candidate": "E_FULL_CACHE",
+      "baselineName": "基线：固定分块 + 仅向量 + 固定高档模型",
+      "candidateName": "全开 + 缓存：语义分块 + 多路融合 + 按意图路由 + 响应缓存",
+      "tokenSavingPct": 21.9,
+      "costSavingPct": 56.9,
+      "qualityDeltaPct": 3.8,
+      "latencyDeltaPct": -5.0,
+      "verdict": "策略 E_FULL_CACHE 比策略 A_BASELINE 节省 21.9% token，质量变化 +3.8%，成本节省 56.9%"
+    }
+  ],
+  "grandTotal": {
+    "totalTokens": 15604356,
+    "totalInputTokens": 14145460,
+    "totalOutputTokens": 1458896,
+    "totalCostUsd": 17.0076,
+    "totalEvents": 22956,
+    "totalChunks": 1411,
+    "experimentCount": 6
+  }
+}
