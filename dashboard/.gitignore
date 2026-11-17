@@ -1,6 +1,6 @@
-# 依赖与构建产物
+﻿# 依赖与构建产物
 node_modules/
-dist/
+# dist/  —— 构建产物作为演示入口保留入库（根 .gitignore 已说明）
 .tsbuild/
 *.tsbuildinfo
 
